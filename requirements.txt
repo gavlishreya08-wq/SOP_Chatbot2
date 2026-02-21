@@ -1,0 +1,7 @@
+langchain
+openai
+faiss-cpu
+pypdf
+python-dotenv
+streamlit
+tiktoken

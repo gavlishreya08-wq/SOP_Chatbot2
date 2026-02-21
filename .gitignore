@@ -1,0 +1,58 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+ENV/
+env/
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# FAISS index and cache
+faiss_index/
+faiss_index/index.faiss
+faiss_index/*.pkl
+
+# Local caches and generated files
+cache/
+cache/faiss_cache.pkl
+cache/*.pyc
+cache/*.pkl
+
+# Python build/dist
+build/
+dist/
+*.egg-info/
+
+# Logs and runtime files
+*.log
+sync_log.json
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Compiled python files
+*.pyc
+*.pyo
+*.pyd
+
+# Coverage and test
+.coverage
+.pytest_cache/
+
+# Environment files
+.env
+.env.local
+
+# SOP documents (optional)
+# To track SOP PDFs remove the following line
+sop_documents/
