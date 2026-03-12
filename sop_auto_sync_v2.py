@@ -60,7 +60,7 @@ class SOPAutoSync:
                     full_url = urljoin(self.base_url + "/", href)
                     html_pages.add(full_url)
 
-        print(f"✅ Found {len(html_pages)} HTML pages")
+        print(f" Found {len(html_pages)} HTML pages")
         return html_pages
 
     # ------------------------------------------
@@ -89,7 +89,7 @@ class SOPAutoSync:
             except Exception:
                 continue
 
-        print(f"✅ Found {len(pdf_links)} PDF links")
+        print(f" Found {len(pdf_links)} PDF links")
         return pdf_links
 
     # ------------------------------------------
@@ -150,6 +150,7 @@ class SOPAutoSync:
         new = 0
         updated = 0
         unchanged = 0
+        changed_files = []
 
         for pdf_url in pdf_links:
             status, filepath = self.download_and_track(pdf_url)
@@ -157,9 +158,13 @@ class SOPAutoSync:
             if status == "new":
                 print(f"  ✓ NEW: {os.path.basename(filepath)}")
                 new += 1
+                changed_files.append(filepath)
+
             elif status == "updated":
                 print(f"  ✓ UPDATED: {os.path.basename(filepath)}")
                 updated += 1
+                changed_files.append(filepath)
+
             elif status == "unchanged":
                 unchanged += 1
 
@@ -173,13 +178,10 @@ class SOPAutoSync:
         print(f"  Unchanged: {unchanged}")
         print("=" * 60 + "\n")
 
-        return new, updated
+        # Now returning changed files also
+        return new, updated, changed_files
 
-
-# ------------------------------------------
 # Helper function for rebuilding vector store
-# ------------------------------------------
-
 def rebuild_vectorstore():
     """
     Rebuild the vector store after syncing new PDFs
@@ -200,7 +202,7 @@ def rebuild_vectorstore():
     # Recreate vector store (this will save it automatically)
     vectorstore = create_vectorstore(chunks)
 
-    print("✅ Vector store rebuilt successfully!")
+    print(" Vector store rebuilt successfully!")
 
     return vectorstore
 
@@ -221,4 +223,4 @@ if __name__ == "__main__":
         print("\n📦 Changes detected - rebuilding vector store...")
         rebuild_vectorstore()
     else:
-        print("\n✅ No changes - vector store is up to date")
+        print("\n No changes - vector store is up to date")

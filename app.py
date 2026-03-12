@@ -70,7 +70,10 @@ h1 { text-align: center; color: #e2e8f0; }
 """, unsafe_allow_html=True)
 
 
-# ──  Session State ──────────────────────────────────────────────
+# ── Session State ──────────────────────────────────────────────
+if "pending_image" not in st.session_state:
+    st.session_state.pending_image = None
+
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
@@ -95,7 +98,6 @@ if "show_admin_login" not in st.session_state:
 
 # ── Helper Functions ──────────────────────────────────────────────
 def track_question(q: str):
-    """Add question to asked list, keep max 8 unique questions"""
     q = q.strip()
     if q.lower() in {"yes", "y", "no", "n", "ok", "okay", "sure", "nope", "yep", "yeah"}:
         return
@@ -139,7 +141,6 @@ def clean_main_answer(answer: str):
 
 
 def build_chat_text():
-    """Build downloadable chat text from messages"""
     if not st.session_state.messages:
         return None
     lines = [
@@ -159,7 +160,113 @@ def build_chat_text():
     return "\n".join(lines)
 
 
-# ──  setup_system() ─────────────────────────────────────────────
+def detect_intent(user_input: str):
+    """
+    Returns ('yes', extra) | ('no', extra) | ('new_question', '')
+    Handles: 'yes', 'yes and tell me X', 'yes please also explain X'
+    """
+    lowered = user_input.strip().lower()
+
+    yes_words = sorted(["yes", "yeah", "yep", "yup", "ok", "okay", "sure", "continue", "please", "y"], key=len, reverse=True)
+    no_words = sorted(["nope", "no thanks", "not now", "no", "nah", "skip", "n"], key=len, reverse=True)
+    connectors = r'^(and also|also|and then|and|but also|but|please also|please|tell me also|also tell me|tell me)' + r'\s*'
+
+    for word in yes_words:
+        if lowered == word:
+            return ("yes", "")
+        if lowered.startswith(word + " ") or lowered.startswith(word + ","):
+            extra = lowered[len(word):].strip().lstrip(",").strip()
+            extra = re.sub(connectors, '', extra, flags=re.IGNORECASE).strip()
+            return ("yes", extra) if extra else ("yes", "")
+
+    for word in no_words:
+        if lowered == word:
+            return ("no", "")
+        if lowered.startswith(word + " ") or lowered.startswith(word + ","):
+            extra = lowered[len(word):].strip().lstrip(",").strip()
+            extra = re.sub(connectors, '', extra, flags=re.IGNORECASE).strip()
+            return ("no", extra) if extra else ("no", "")
+
+    return ("new_question", "")
+
+
+def is_image_relevant(question: str, image_path: str) -> bool:
+    """Check if the image filename is relevant to the question"""
+    question_lower = question.lower()
+    image_name = os.path.basename(image_path).lower()
+    image_name = re.sub(r'\.(png|jpg|jpeg|gif)$', '', image_name)
+    image_keywords = re.split(r'[_\-\s\.]+', image_name)
+    matches = sum(1 for kw in image_keywords if len(kw) > 2 and kw in question_lower)
+    return matches >= 1
+
+
+def is_conversational(question: str) -> str | None:
+    """
+    Detect vague/conversational inputs that shouldn't hit the RAG chain.
+    Returns a response string if conversational, else None.
+    """
+    q = question.strip().lower()
+
+    vague_patterns = [
+        r"^can (you|u) tell me (anything|something) else",
+        r"^tell me (anything|something) else",
+        r"^anything else",
+        r"^something else",
+        r"^what else",
+        r"^what (can|do) you know",
+        r"^what (can|do) you (tell|say)",
+        r"^surprise me",
+        r"^give me (something|anything|more|info)",
+        r"^more (info|information|details)?$",
+        r"^(hi|hello|hey|hii|helo)[\s!.]*$",
+        r"^how are you",
+        r"^what('s| is) up",
+        r"^(ok|okay|thanks|thank you|thx|ty|cool|great|got it|noted|alright|sure)[\s!.]*$",
+        r"^(bye|goodbye|see you|cya)[\s!.]*$",
+        r"^(yes|no|y|n)[\s!.]*$",
+    ]
+
+    greetings = {"hi", "hello", "hey", "hii", "helo", "howdy"}
+    closings = {"bye", "goodbye", "see you", "cya", "thanks", "thank you", "thx", "ty"}
+    ack = {"ok", "okay", "cool", "great", "got it", "noted", "alright"}
+
+
+    irrelevant_reply = (
+        "Sorry, I couldn't understand that or it seems unrelated to our SOPs. "
+        "I'm here to help with company policies and procedures!\n\n"
+        "You can ask me about:\n"
+        "\u2022 **Dress Code** \u2014 formal vs casual attire rules\n"
+        "\u2022 **Leave Policy** \u2014 types of leave and procedures\n"
+        "\u2022 **Hierarchy** \u2014 organisational structure\n"
+        "\u2022 **Jira Workflow** \u2014 project and task management\n"
+        "\u2022 **Social Media Policy** \u2014 content approval process\n"
+        "\u2022 **IT & Security** \u2014 access control, data backup\n\n"
+        "Just type your question!"
+    )
+
+    # Single character or gibberish (e.g. "k", "m", "lol", "hmm")
+    gibberish = {"k", "kk", "hmm", "hm", "lol", "lmao", "haha", "hehe", "ohh", "ohk", "ohkay", "ooh", "umm", "uh", "err", "wtf", "omg"}
+    if q in gibberish or (len(q) == 1 and q not in {"y", "n"}):
+        return irrelevant_reply
+
+
+    if q in greetings:
+        return "Hello! I'm your SOP assistant. Ask me anything about company policies, procedures, or workflows."
+
+    if q in closings:
+        return "Goodbye! Feel free to return anytime you have SOP-related questions."
+
+    if q in ack:
+        return "Glad to help! Feel free to ask anything else about the SOPs."
+
+    for pattern in vague_patterns:
+        if re.search(pattern, q):
+            return irrelevant_reply
+
+    return None
+
+
+# ── setup_system() ─────────────────────────────────────────────
 @st.cache_resource
 def setup_system():
     vectorstore = load_existing_vectorstore()
@@ -188,6 +295,9 @@ CRITICAL RULES - Follow exactly:
 6. Do NOT make up or invent information
 7. Do NOT provide lists of multiple questions
 8. Do NOT number your questions
+9. If the question is completely unrelated to company SOPs, policies, procedures, or work (e.g. general knowledge, personal topics, random chat, gibberish), respond ONLY with this exact text: "IRRELEVANT_QUESTION"
+   Examples of irrelevant: "what is the capital of France", "tell me a joke", "k", "hmm", "what's 2+2"
+   Examples of relevant: "what is the dress code", "explain the leave policy", "show me the hierarchy" 
 
 ANSWER LENGTH GUIDELINE:
 - Simple questions (single concept): 3-5 lines
@@ -266,15 +376,15 @@ Your answer:
         | StrOutputParser()
     )
 
-    return rag_chain
+    return rag_chain, retriever
 
 
-# ──  Instantiate chain and cache ───────────────────────────────
-qa_chain = setup_system()
+# ── Instantiate chain and cache ───────────────────────────────
+qa_chain, retriever = setup_system()
 cache = SemanticCache()
 
 
-# ──  Sidebar UI ────────────────────────────────────────────────
+# ── Sidebar UI ────────────────────────────────────────────────
 with st.sidebar:
 
     col_a, col_b = st.columns(2)
@@ -316,7 +426,6 @@ with st.sidebar:
         )
 
     st.markdown("---")
-
     st.subheader("🔒 Admin")
 
     if not st.session_state.is_admin:
@@ -342,12 +451,19 @@ with st.sidebar:
                     base_url="https://upaygoa.com/geltm/helpndoc",
                     download_dir="./sop_documents"
                 )
-                new_files, updated_files = syncer.sync()
 
-                if new_files or updated_files:
-                    setup_system.clear()
-                    qa_chain = setup_system()
-                    st.success("SOPs synced and updated successfully!")
+                new_files, updated_files, changed_files = syncer.sync()
+
+                if changed_files:
+                    from rag.loader import load_pdfs
+                    from rag.splitter import split_docs
+                    from rag.vectorstore import load_existing_vectorstore
+
+                    docs = load_pdfs(filepaths=changed_files)
+                    chunks = split_docs(docs)
+                    vectorstore = load_existing_vectorstore()
+                    vectorstore.add_documents(chunks)
+                    st.success("SOPs synced and vector DB updated successfully!")
                 else:
                     st.info("No new or updated SOPs found.")
 
@@ -356,14 +472,18 @@ with st.sidebar:
             st.rerun()
 
 
-# ──  Main Chat UI ──────────────────────────────────────────────
+# ── Main Chat UI ──────────────────────────────────────────────
 st.title(" Standard Operating Procedures Chatbot 🤖")
 
 for role, msg in st.session_state.messages:
     if role == "user":
         st.markdown(f"<div class='user-msg'>{msg}</div>", unsafe_allow_html=True)
     elif role == "bot":
-        st.markdown(f"<div class='bot-msg'>{msg}</div>", unsafe_allow_html=True)
+        if msg.startswith("[IMAGE]"):
+            image_path = msg.replace("[IMAGE]", "")
+            st.image(image_path)
+        else:
+            st.markdown(f"<div class='bot-msg'>{msg}</div>", unsafe_allow_html=True)
     elif role == "followup":
         st.markdown(f"<div class='followup-box'>💬 <strong>{msg}</strong><br><br><em>Would you like me to explain this? Type 'yes' or 'no'</em></div>", unsafe_allow_html=True)
 
@@ -374,12 +494,12 @@ with st.form("chat_form", clear_on_submit=True):
     send = st.form_submit_button("Send")
 
 
-# ── 7️⃣ Message Handling ──────────────────────────────────────────
+# ── Message Handling ──────────────────────────────────────────
 YES_WORDS = {"yes", "y", "ok", "okay", "sure", "continue", "please", "yep", "yeah", "yup"}
 NO_WORDS = {"no", "n", "nope", "skip", "not now", "no thanks", "nah"}
 
 
-# FAQ Handler
+# ── FAQ Handler (sidebar click) ───────────────────────────────
 if st.session_state.quick_question:
     question = st.session_state.quick_question
     st.session_state.quick_question = None
@@ -387,6 +507,25 @@ if st.session_state.quick_question:
     track_question(question)
     st.session_state.messages.append(("user", question))
     typing_placeholder.markdown(show_typing_indicator(), unsafe_allow_html=True)
+
+    docs = retriever.invoke(question)
+
+    # Check for relevant image
+    image_doc = None
+    for doc in docs:
+        if doc.metadata.get("type") == "image":
+            if is_image_relevant(question, doc.metadata["path"]):
+                image_doc = doc
+                break
+
+    if image_doc:
+        abs_path = os.path.abspath(image_doc.metadata["path"])
+        typing_placeholder.empty()
+        st.session_state.messages.append(("bot", f"[IMAGE]{abs_path}"))
+        st.session_state.messages.append(("followup", "Does this answer your question? Feel free to ask anything else!"))
+        st.session_state.pending_followup = "image_shown"
+        st.session_state.waiting_for_response = True
+        st.rerun()
 
     cached_answer = cache.search(question)
     if cached_answer:
@@ -404,43 +543,43 @@ if st.session_state.quick_question:
         st.session_state.messages.append(("followup", followup))
         st.session_state.pending_followup = followup
         st.session_state.waiting_for_response = True
-    else:
-        st.session_state.pending_followup = None
-        st.session_state.waiting_for_response = False
 
     st.rerun()
 
 
-# Chat Input Handler
+# ── Main Input Handler ────────────────────────────────────────
 if send and question.strip():
-    q_clean = question.lower().strip()
 
-    if st.session_state.waiting_for_response:
+    user_input = question.strip().lower()
+    intent, extra_question = detect_intent(user_input)
+
+    # ── CASE 1: Waiting for yes/no AND user indicated yes/no ─────
+    if st.session_state.waiting_for_response and intent in ("yes", "no"):
         st.session_state.messages.append(("user", question))
 
-        if q_clean in NO_WORDS:
-            st.session_state.messages.append(("bot", "No problem! Feel free to ask if you have any other questions about the SOP."))
-            st.session_state.pending_followup = None
-            st.session_state.waiting_for_response = False
-            st.rerun()
+        # User said yes/no to "show image?"
+        if st.session_state.pending_followup == "show_image":
+            if intent == "yes":
+                image_path = st.session_state.pending_image
+                abs_path = os.path.abspath(image_path)
+                st.session_state.messages.append(("bot", f"[IMAGE]{abs_path}"))
+                st.session_state.messages.append(("followup", "Hope that helps! Do you have any other questions?"))
+                st.session_state.pending_followup = "image_shown"
+                st.session_state.waiting_for_response = True
+            else:
+                st.session_state.messages.append(("bot", "No problem! Feel free to ask anything else."))
+                st.session_state.pending_followup = None
+                st.session_state.waiting_for_response = False
+            st.session_state.pending_image = None
 
-        elif q_clean in YES_WORDS:
-            if st.session_state.pending_followup:
-                real_question = st.session_state.pending_followup
+            # If user added an extra question, answer it too
+            if extra_question:
                 typing_placeholder.markdown(show_typing_indicator(), unsafe_allow_html=True)
-
-                cached_answer = cache.search(real_question)
-                if cached_answer:
-                    answer = cached_answer
-                else:
-                    answer = qa_chain.invoke(real_question)
-                    cache.add(real_question, answer)
-
+                answer = qa_chain.invoke(extra_question)
                 typing_placeholder.empty()
-                new_followup = extract_followup_question(answer)
                 main_answer = clean_main_answer(answer)
+                new_followup = extract_followup_question(answer)
                 st.session_state.messages.append(("bot", main_answer))
-
                 if new_followup:
                     st.session_state.messages.append(("followup", new_followup))
                     st.session_state.pending_followup = new_followup
@@ -448,41 +587,157 @@ if send and question.strip():
                 else:
                     st.session_state.pending_followup = None
                     st.session_state.waiting_for_response = False
-            else:
-                st.session_state.waiting_for_response = False
+            st.rerun()
+
+        # User said yes/no after seeing an image
+        elif st.session_state.pending_followup == "image_shown":
+            # Figure out what question to answer
+            # If user said yes with extra question → answer extra question
+            # If user said yes with no extra → ask them what they want to know
+            # If user said no → acknowledge and close
+
+            if intent == "yes" and extra_question:
+                # User said "yes and also tell me X" → answer X
+                typing_placeholder.markdown(show_typing_indicator(), unsafe_allow_html=True)
+                answer = qa_chain.invoke(extra_question)
+                typing_placeholder.empty()
+                main_answer = clean_main_answer(answer)
+                new_followup = extract_followup_question(answer)
+                st.session_state.messages.append(("bot", main_answer))
+                if new_followup:
+                    st.session_state.messages.append(("followup", new_followup))
+                    st.session_state.pending_followup = new_followup
+                    st.session_state.waiting_for_response = True
+                else:
+                    st.session_state.pending_followup = None
+                    st.session_state.waiting_for_response = False
+
+            elif intent == "yes":
+                # User said plain "yes" → ask what specific details they need
+                st.session_state.messages.append(("bot", "Sure! What specific details would you like to know about this? Feel free to ask anything."))
                 st.session_state.pending_followup = None
+                st.session_state.waiting_for_response = False
 
-            st.rerun()
-
-        else:
-            st.session_state.waiting_for_response = False
-            st.session_state.pending_followup = None
-            track_question(question)
-            typing_placeholder.markdown(show_typing_indicator(), unsafe_allow_html=True)
-
-            cached_answer = cache.search(question)
-            if cached_answer:
-                answer = cached_answer
             else:
-                answer = qa_chain.invoke(question)
-                cache.add(question, answer)
+                # User said no (with or without extra question)
+                st.session_state.messages.append(("bot", "No problem! Feel free to ask anything else."))
+                st.session_state.pending_followup = None
+                st.session_state.waiting_for_response = False
 
-            typing_placeholder.empty()
-            followup = extract_followup_question(answer)
-            main_answer = clean_main_answer(answer)
-            st.session_state.messages.append(("bot", main_answer))
-
-            if followup:
-                st.session_state.messages.append(("followup", followup))
-                st.session_state.pending_followup = followup
-                st.session_state.waiting_for_response = True
-
+                # If user said "no but also tell me X" → answer X
+                if extra_question:
+                    typing_placeholder.markdown(show_typing_indicator(), unsafe_allow_html=True)
+                    answer = qa_chain.invoke(extra_question)
+                    typing_placeholder.empty()
+                    main_answer = clean_main_answer(answer)
+                    new_followup = extract_followup_question(answer)
+                    st.session_state.messages.append(("bot", main_answer))
+                    if new_followup:
+                        st.session_state.messages.append(("followup", new_followup))
+                        st.session_state.pending_followup = new_followup
+                        st.session_state.waiting_for_response = True
+                    else:
+                        st.session_state.pending_followup = None
+                        st.session_state.waiting_for_response = False
             st.rerun()
 
+        # User said yes/no to a text follow-up question
+        else:
+            if intent == "yes":
+                # ALWAYS answer the original pending followup first
+                followup_q = st.session_state.pending_followup
+                st.session_state.pending_followup = None
+                st.session_state.waiting_for_response = False
+                typing_placeholder.markdown(show_typing_indicator(), unsafe_allow_html=True)
+                answer = qa_chain.invoke(followup_q)
+                typing_placeholder.empty()
+                main_answer = clean_main_answer(answer)
+                new_followup = extract_followup_question(answer)
+                st.session_state.messages.append(("bot", main_answer))
+
+                # If user ALSO asked an extra question, answer that too
+                if extra_question:
+                    typing_placeholder.markdown(show_typing_indicator(), unsafe_allow_html=True)
+                    extra_answer = qa_chain.invoke(extra_question)
+                    typing_placeholder.empty()
+                    extra_main = clean_main_answer(extra_answer)
+                    extra_followup = extract_followup_question(extra_answer)
+                    st.session_state.messages.append(("bot", extra_main))
+                    if extra_followup:
+                        st.session_state.messages.append(("followup", extra_followup))
+                        st.session_state.pending_followup = extra_followup
+                        st.session_state.waiting_for_response = True
+                    else:
+                        st.session_state.pending_followup = None
+                        st.session_state.waiting_for_response = False
+                elif new_followup:
+                    st.session_state.messages.append(("followup", new_followup))
+                    st.session_state.pending_followup = new_followup
+                    st.session_state.waiting_for_response = True
+
+            else:
+                st.session_state.messages.append(("bot", "No problem! Feel free to ask anything else."))
+                st.session_state.pending_followup = None
+                st.session_state.waiting_for_response = False
+
+                # If user said "no but also tell me X"
+                if extra_question:
+                    typing_placeholder.markdown(show_typing_indicator(), unsafe_allow_html=True)
+                    answer = qa_chain.invoke(extra_question)
+                    typing_placeholder.empty()
+                    main_answer = clean_main_answer(answer)
+                    new_followup = extract_followup_question(answer)
+                    st.session_state.messages.append(("bot", main_answer))
+                    if new_followup:
+                        st.session_state.messages.append(("followup", new_followup))
+                        st.session_state.pending_followup = new_followup
+                        st.session_state.waiting_for_response = True
+                    else:
+                        st.session_state.pending_followup = None
+                        st.session_state.waiting_for_response = False
+            st.rerun()
+
+    # ── CASE 2: New question ──────────────────────────────────────
     else:
+        # Reset any stale pending state
+        st.session_state.pending_followup = None
+        st.session_state.waiting_for_response = False
+        st.session_state.pending_image = None
+
         st.session_state.messages.append(("user", question))
         track_question(question)
+
         typing_placeholder.markdown(show_typing_indicator(), unsafe_allow_html=True)
+
+        # Retrieve docs
+        docs = retriever.invoke(question)
+
+        # Check for relevant image
+        image_doc = None
+        for doc in docs:
+            if doc.metadata.get("type") == "image":
+                if is_image_relevant(question, doc.metadata["path"]):
+                    image_doc = doc
+                    break
+
+        # Relevant image found → show it with follow-up
+        if image_doc:
+            abs_path = os.path.abspath(image_doc.metadata["path"])
+            typing_placeholder.empty()
+            st.session_state.messages.append(("bot", f"[IMAGE]{abs_path}"))
+            st.session_state.messages.append(("followup", "Does this answer your question? Feel free to ask anything else!"))
+            st.session_state.pending_followup = "image_shown"
+            st.session_state.waiting_for_response = True
+            st.rerun()
+
+        # No relevant image → check if conversational first
+        conv_response = is_conversational(question)
+        if conv_response:
+            typing_placeholder.empty()
+            st.session_state.messages.append(("bot", conv_response))
+            st.session_state.pending_followup = None
+            st.session_state.waiting_for_response = False
+            st.rerun()
 
         cached_answer = cache.search(question)
         if cached_answer:
@@ -492,11 +747,47 @@ if send and question.strip():
             cache.add(question, answer)
 
         typing_placeholder.empty()
-        followup = extract_followup_question(answer)
+
+        # Handle irrelevant questions flagged by LLM
+        if "IRRELEVANT_QUESTION" in answer:
+            irrelevant_msg = (
+                "Sorry, I couldn't understand that or it seems unrelated to our SOPs. "
+                "I'm here to help with company policies and procedures!\n\n"
+                "You can ask me about:\n"
+                "• **Dress Code** — formal vs casual attire rules\n"
+                "• **Leave Policy** — types of leave and procedures\n"
+                "• **Hierarchy** — organisational structure\n"
+                "• **Jira Workflow** — project and task management\n"
+                "• **Social Media Policy** — content approval process\n"
+                "• **IT & Security** — access control, data backup\n\n"
+                "Just type your question!"
+            )
+            st.session_state.messages.append(("bot", irrelevant_msg))
+            st.session_state.pending_followup = None
+            st.session_state.waiting_for_response = False
+            st.rerun()
+
         main_answer = clean_main_answer(answer)
+        followup = extract_followup_question(answer)
+
         st.session_state.messages.append(("bot", main_answer))
 
-        if followup:
+        # Check for related image to offer alongside text answer
+        related_image_doc = None
+        for doc in docs:
+            if doc.metadata.get("type") == "image":
+                if is_image_relevant(question, doc.metadata["path"]):
+                    related_image_doc = doc
+                    break
+
+        if related_image_doc:
+            st.session_state.pending_image = related_image_doc.metadata["path"]
+            st.session_state.messages.append(
+                ("followup", "There is a related flowchart available. Would you like to see it?")
+            )
+            st.session_state.waiting_for_response = True
+            st.session_state.pending_followup = "show_image"
+        elif followup:
             st.session_state.messages.append(("followup", followup))
             st.session_state.pending_followup = followup
             st.session_state.waiting_for_response = True

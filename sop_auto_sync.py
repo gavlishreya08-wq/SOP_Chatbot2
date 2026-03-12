@@ -91,13 +91,10 @@ class SOPAutoSync:
                     
                     # Convert relative URLs to absolute
                     if not href.startswith('http'):
-                        # Remove leading slash and construct full URL
                         href = href.lstrip('/')
                         full_url = f"{self.base_url}/{href}"
                     else:
                         full_url = href
-                    
-                    # Only include HTML pages from the same domain
                     if (full_url.startswith(self.base_url) and 
                         (full_url.endswith('.html') or full_url.endswith('.htm')) and
                         full_url not in visited):
@@ -324,7 +321,6 @@ class SOPAutoSync:
         print(f"  Updated documents:   {len(result['updated'])}")
         print(f"  Unchanged documents: {len(result['unchanged'])}")
         print(f"{'='*60}\n")
-        
         return result
 
 

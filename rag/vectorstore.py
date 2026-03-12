@@ -1,25 +1,23 @@
-from langchain_community.vectorstores import FAISS
+from langchain_community.vectorstores import Chroma
 from rag.embeddings import get_embeddings
 import os
 
-INDEX_PATH = "faiss_index"
+PERSIST_DIRECTORY = "chroma_db"
 
 def create_vectorstore(chunks):
     embeddings = get_embeddings()
 
-    # If index already exists, load it
-    if os.path.exists(INDEX_PATH):
-        vectorstore = FAISS.load_local(
-            INDEX_PATH,
-            embeddings,
-            allow_dangerous_deserialization=True
-        )
-        vectorstore.add_documents(chunks)
-    else:
-        vectorstore = FAISS.from_documents(chunks, embeddings)
+    # Create or load persistent Chroma DB
+    vectorstore = Chroma(
+        persist_directory=PERSIST_DIRECTORY,
+        embedding_function=embeddings
+    )
 
-    # Always save after update
-    vectorstore.save_local(INDEX_PATH)
+    # Add new documents
+    vectorstore.add_documents(chunks)
+
+    # Persist to disk
+    vectorstore.persist()
 
     return vectorstore
 
@@ -27,10 +25,9 @@ def create_vectorstore(chunks):
 def load_existing_vectorstore():
     embeddings = get_embeddings()
 
-    if os.path.exists(INDEX_PATH):
-        return FAISS.load_local(
-            INDEX_PATH,
-            embeddings,
-            allow_dangerous_deserialization=True
+    if os.path.exists(PERSIST_DIRECTORY):
+        return Chroma(
+            persist_directory=PERSIST_DIRECTORY,
+            embedding_function=embeddings
         )
     return None
