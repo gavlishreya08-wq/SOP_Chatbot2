@@ -1,0 +1,44 @@
+Department of Information Technology Government of Goa 2nd Floor, IT
+Hub, opposite to ITI, Altinho, Panaji Goa
+
+F. No. 11(30)/DOIT/2020/SDC Circulars Date: 24/03/2021
+
+CIRCULAR
+
+The Department of Information Technology (DoIT), Government of Goa has
+decided to shift all the websites and applications hosted at State Data
+Centre (SDC), Altinho to NIC Cloud/Mini Cloud.
+
+In this regard, M/s Info Tech Corporation of Goa Ltd has been appointed
+as the Nodal Agency/Project Coordinator for the State of Goa in
+executing entire migration activity from SDC to NIC Cloud/Mini Cloud.
+
+Further, all the Corporations/Public Sector Undertakings/Boards/Trusts/
+Revenue Generating Government Departments are requested to kindly take
+note of the same and accordingly coordinate with M/s Info Tech
+Corporation of Goa Ltd to migrate concerned websites/applications from
+SDC to NIC Cloud/Mini Cloud.
+
+The cost towards migration activity and to avail further required
+services on NIC Cloud/Mini Cloud would be borne by the respective
+organization.
+
+Note: This circular is applicable to all the Corporations/Public Sector
+Undertakings, Boards, Trusts, Autonomous Organizations of Government of
+Goa who may be planning to host or are presently hosted their
+application(s)/website(s) in State Data Center (SDC), Altinho.
+
+Yours faithfully,
+
+(Ankita Anand, IAS) Director (IT)
+
+To: 1. All Corporations/Public Sector Undertakings/Boards/Trusts/Revenue
+Generating Government Departments. 2. The Managing Director, M/s Info
+Tech Corporation of Goa Ltd (ITG) – (with request to expedite the
+procedure and assist all organizations in carrying out the activity). 3.
+SIO, National Informatics Centre, Porvorim Goa. 4. CEO, M/s Goa
+Electronics Limited, Panaji Goa.
+
+Copy for information to: 1. O.S.D to Minister (IT), Secretariat,
+Porvorim Goa. 2. P.A to Secretary (IT), Secretariat Complex,
+Secretariat, Porvorim Goa.

@@ -1,0 +1,157 @@
+{
+  "2_RR_TechnicalResourceManager_version1.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/RRforTechnicalResourceProcessTra.html",
+    "version": "v1.0",
+    "created_date": "10 Jan 2024"
+  },
+  "3_RR_TechnicalLead_version2.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/RRforTechnicalLead.html",
+    "version": "v2.0",
+    "created_date": "15 Jan 2024"
+  },
+  "4_RR_DevelopmentEng_version2.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/RRforDevelopmentEngineers.html",
+    "version": "v2.0",
+    "created_date": "22 Jan 2024"
+  },
+  "5_RR_Maintainacelead.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/RRforMaintenanceLead.html",
+    "version": "v1.3",
+    "created_date": "02 Feb 2024"
+  },
+  "6_RR_MaintainaceEng.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/RRforMaintenanceEngineer.html",
+    "version": "v2.1",
+    "created_date": "18 Feb 2024"
+  },
+  "SOP_TestAutomation_V1.0.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/SOPforTestAutomationusingTestimi.html",
+    "version": "v1.0",
+    "created_date": "01 Mar 2024"
+  },
+  "SOP_Test Management _V1.0.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/SOPforTestManagement.html",
+    "version": "v1.0",
+    "created_date": "02 Mar 2024"
+  },
+  "SOP_Standup_meeting.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/MeetingStandUp.html",
+    "version": "v1.0",
+    "created_date": "03 Mar 2024"
+  },
+  "SOP_ServerWhitelistingg.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/ServerWhitelisting.html",
+    "version": "v1.1",
+    "created_date": "04 Mar 2024"
+  },
+  "SOP_Root Cause Fixture.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/ProductionIssueRootCauseFixture.html",
+    "version": "v1.0",
+    "created_date": "05 Mar 2024"
+  },
+  "SOP_Production Issue.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/HowtoManageProductionIssues.html",
+    "version": "v1.2",
+    "created_date": "06 Mar 2024"
+  },
+  "SOP_NewProjectExecution_version2.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/NewProjectExecutionSOP.html",
+    "version": "v2.0",
+    "created_date": "07 Mar 2024"
+  },
+  "SOP_Issue_resolution_meeting.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/MeetingIssueResoulution.html",
+    "version": "v1.0",
+    "created_date": "08 Mar 2024"
+  },
+  "SOP_Detailed_Work_Review.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/DetailedWorkReviewMeeting.html",
+    "version": "v1.0",
+    "created_date": "09 Mar 2024"
+  },
+  "SOP_EmpanelAgency_Version2.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/SoftwareDevelopmentbyEmpaneledAg.html",
+    "version": "v2.0",
+    "created_date": "10 Mar 2024"
+  },
+  "SOP_Database Migration and Porting.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/SOPDatabaseMigrationandPorting.html",
+    "version": "v1.0",
+    "created_date": "11 Mar 2024"
+  },
+  "SOP_DATABASE DESIGN AND MODELING.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/SOPDatabaseDesignandModeling.html",
+    "version": "v1.0",
+    "created_date": "12 Mar 2024"
+  },
+  "SOP_CTO_Review.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/MeetingCTOReview.html",
+    "version": "v1.0",
+    "created_date": "13 Mar 2024"
+  },
+  "SOP_Backend_Data_Update_Request_20260224175914.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/HowtoManageBackendDataupdaterequ.html",
+    "version": "v1.3",
+    "created_date": "16 Mar 2024"
+  },
+  "SOP_Backend Report.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/HowtoManageBackendReportRequest.html",
+    "version": "v1.0",
+    "created_date": "15 Mar 2024"
+  },
+  "SOP_APPLICATION DEPLOYMENT _ RELEASE.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/SOPApplicationDeploymentRelease.html",
+    "version": "v1.0",
+    "created_date": "17 Mar 2024"
+  },
+  "SOP TL Review Meet.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/SOPTLReviewMeet.html",
+    "version": "v1.0",
+    "created_date": "19 Mar 2024"
+  },
+  "SOP Source Code Management Gitlab.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/SourceCodeManagementGitlab.html",
+    "version": "v1.0",
+    "created_date": "20 Mar 2024"
+  },
+  "ChangeManagementWorkflow_version2.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/ChangeManagementworkflow.html",
+    "version": "v2.0",
+    "created_date": "28 Mar 2024"
+  },
+  "Coding React Standards.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/ReactCodingStandards.html",
+    "version": "v1.0",
+    "created_date": "29 Mar 2024"
+  },
+  "DatabaseManagementStandards&Best Practices.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/DatabaseManagementStandardsBestP.html",
+    "version": "v1.0",
+    "created_date": "30 Mar 2024"
+  },
+  "Final_3_Database Coding_Development Standards & Best Practice.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/DatabaseCoddingStandardsBestPrac.html",
+    "version": "v3.0",
+    "created_date": "31 Mar 2024"
+  },
+  "GENERAL SOFTWARE CODING STANDARDS & BEST PRACTICES .pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/GeneralcodingStandardsBestPracti.html",
+    "version": "v1.0",
+    "created_date": "25 Mar 2024"
+  },
+  "Webform Design Standards.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/WebformDesignStandards.html",
+    "version": "v1.0",
+    "created_date": "01 Apr 2024"
+  },
+  "Website-SEO-Standards.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/WebsiteSearchEngineOptimizationS.html",
+    "version": "v1.0",
+    "created_date": "02 Apr 2024"
+  },
+  "Report_Standard_&_Best_Practices_V1.pdf": {
+    "link": "https://upaygoa.com/geltm/helpndoc/ReportStandardsBestPractices.html",
+    "version": "v1.0",
+    "created_date": "24 Mar 2024"
+  }
+}
