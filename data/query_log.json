@@ -98,5 +98,15 @@
     "was_clarification": false,
     "answer_mode": "detailed",
     "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-09T11:12:06.495758+00:00",
+    "question": "What is the release deployment process?",
+    "active_sop": "SOP_APPLICATION DEPLOYMENT _ RELEASE.pdf",
+    "detected_sop": "SOP_APPLICATION DEPLOYMENT _ RELEASE.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "step-by-step",
+    "llm_provider": "gemini"
   }
 ]
