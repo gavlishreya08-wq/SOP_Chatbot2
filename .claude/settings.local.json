@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(./venv/Scripts/python -c \"from backend.core.feedback import save_feedback, get_analytics_summary, save_conversation; print\\('feedback module OK'\\)\")",
+      "Bash(./venv/Scripts/python -m unittest tests.test_rag_chain -v)"
+    ]
+  }
+}

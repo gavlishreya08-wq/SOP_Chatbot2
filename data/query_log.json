@@ -1,0 +1,102 @@
+[
+  {
+    "timestamp": "2026-04-09T10:01:44.352467+00:00",
+    "question": "Explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-09T10:01:44.355234+00:00",
+    "question": "Explain change workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-09T10:01:44.357672+00:00",
+    "question": "What is the role?",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-09T10:01:44.359672+00:00",
+    "question": "Explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-09T10:03:14.425103+00:00",
+    "question": "Explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-09T10:03:14.427012+00:00",
+    "question": "Explain change workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-09T10:03:14.429020+00:00",
+    "question": "What is the role?",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-09T10:03:14.430020+00:00",
+    "question": "Explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-09T10:04:51.877179+00:00",
+    "question": "Explain the change management workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-09T10:37:06.741301+00:00",
+    "question": "What is the release deployment process?",
+    "active_sop": null,
+    "detected_sop": "SOP_APPLICATION DEPLOYMENT _ RELEASE.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  }
+]

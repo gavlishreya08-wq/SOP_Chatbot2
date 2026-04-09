@@ -17,16 +17,14 @@ env/
 .DS_Store
 Thumbs.db
 
+# Vector database
+chroma_db/
+
 # FAISS index and cache
 faiss_index/
-faiss_index/index.faiss
-faiss_index/*.pkl
 
-# Local caches and generated files
+# Local caches
 cache/
-cache/faiss_cache.pkl
-cache/*.pyc
-cache/*.pkl
 
 # Python build/dist
 build/
@@ -36,14 +34,10 @@ dist/
 # Logs and runtime files
 *.log
 sync_log.json
+.run/
 
 # Notebook checkpoints
 .ipynb_checkpoints/
-
-# Compiled python files
-*.pyc
-*.pyo
-*.pyd
 
 # Coverage and test
 .coverage
@@ -56,3 +50,7 @@ sync_log.json
 # SOP documents (optional)
 # To track SOP PDFs remove the following line
 sop_documents/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/

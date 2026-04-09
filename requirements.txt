@@ -1,0 +1,31 @@
+# Backend
+fastapi
+uvicorn[standard]
+pydantic-settings
+PyJWT
+
+# LLM providers
+langchain
+langchain-core
+langchain-text-splitters
+langchain-google-genai
+langchain-groq
+langchain-community
+
+# Vector store & embeddings
+chromadb
+sentence-transformers
+langchain-huggingface
+faiss-cpu
+
+# Document processing
+pypdf
+pymupdf
+
+# Web scraping (SOP sync)
+requests
+beautifulsoup4
+
+# Utilities
+python-dotenv
+tiktoken
