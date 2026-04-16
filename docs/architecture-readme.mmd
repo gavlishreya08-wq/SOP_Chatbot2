@@ -1,0 +1,20 @@
+flowchart LR
+    Browser["User Browser"]
+    UI["React + Vite UI"]
+    API["FastAPI API"]
+    RAG["RAG engine"]
+    Vector["Chroma vector store"]
+    LLM["Gemini / Groq"]
+    Files["Local SOP files and metadata"]
+    Sync["Admin sync / rebuild"]
+    Remote["Remote SOP site"]
+
+    Browser --> UI
+    UI --> API
+    API --> RAG
+    RAG --> Vector
+    RAG --> LLM
+    Files --> Vector
+    Sync --> Remote
+    Sync --> Files
+    Sync --> Vector

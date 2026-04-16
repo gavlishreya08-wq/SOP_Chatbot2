@@ -1,0 +1,101 @@
+flowchart TD
+    User["User Browser"]
+
+    subgraph FE["Frontend (React + Vite + Radix UI)"]
+        App["App Shell"]
+        ChatUI["Chat Workspace"]
+        AdminUI["Admin Console"]
+        Hook["useChat hook"]
+    end
+
+    subgraph BE["Backend (FastAPI)"]
+        Main["main.py"]
+        ChatAPI["/api/chat"]
+        CompareAPI["/api/compare"]
+        ConvAPI["/api/conversations*"]
+        FeedbackAPI["/api/feedback"]
+        StatusAPI["/api/sops /api/status /api/health"]
+        AdminAPI["/api/admin/*"]
+    end
+
+    subgraph CORE["Core Services"]
+        Router["Provider selection + fallback"]
+        RAG["RAGChain"]
+        Rewrite["Conversation-aware query rewrite"]
+        Clarify["Clarification path"]
+        Retriever["Retriever"]
+        Answer["Grounded answer generation"]
+        Format["Source formatting + confidence + suggestions"]
+        Auth["JWT auth"]
+        Sync["SOPSync"]
+        Rebuild["Full / incremental reindex"]
+        Ingest["Loader + splitter + embeddings"]
+    end
+
+    subgraph DATA["Local Data"]
+        Chroma["Chroma vector DB"]
+        SOPDocs["sop_documents/ PDFs"]
+        ImgTxt["img_txt/ extracted text"]
+        Flowcharts["flowcharts/ images"]
+        Meta["sop_metadata.json"]
+        Runtime["data/ conversations, feedback, analytics"]
+    end
+
+    subgraph EXT["External Systems"]
+        Gemini["Gemini API"]
+        Groq["Groq API"]
+        SOPSite["Remote SOP site / TOC / PDF links"]
+    end
+
+    User --> App
+    App --> ChatUI
+    App --> AdminUI
+    ChatUI --> Hook
+
+    Main --> ChatAPI
+    Main --> CompareAPI
+    Main --> ConvAPI
+    Main --> FeedbackAPI
+    Main --> StatusAPI
+    Main --> AdminAPI
+
+    Hook -->|REST + SSE| ChatAPI
+    Hook --> CompareAPI
+    Hook --> ConvAPI
+    Hook --> FeedbackAPI
+    Hook --> StatusAPI
+    AdminUI --> AdminAPI
+
+    ChatAPI --> Router
+    CompareAPI --> Router
+    Router --> RAG
+
+    RAG --> Rewrite
+    RAG --> Clarify
+    Rewrite --> Retriever
+    Clarify --> Format
+    Retriever --> Chroma
+    RAG --> Answer
+    Answer --> Gemini
+    Answer --> Groq
+    Answer --> Format
+
+    ConvAPI --> Runtime
+    FeedbackAPI --> Runtime
+    StatusAPI --> Runtime
+
+    AdminAPI --> Auth
+    AdminAPI --> Sync
+    AdminAPI --> Rebuild
+    AdminAPI --> Runtime
+
+    Sync --> SOPSite
+    Sync --> SOPDocs
+    Sync --> Ingest
+    Rebuild --> Ingest
+
+    SOPDocs --> Ingest
+    ImgTxt --> Ingest
+    Flowcharts --> Ingest
+    Meta --> Ingest
+    Ingest --> Chroma

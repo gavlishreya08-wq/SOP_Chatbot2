@@ -34,6 +34,7 @@ The frontend runs on port `5173` during development and talks to the backend thr
 
 ```text
 backend/              FastAPI app, RAG logic, admin/chat APIs
+docs/                 Architecture diagrams and Mermaid sources
 frontend/             React + Vite frontend
 sop_documents/        PDF SOP source files
 img_txt/              Extracted text documents
@@ -46,6 +47,10 @@ stop.ps1              Stops managed processes started by start.ps1
 rebuild_chroma.py     Full local vectorstore rebuild script
 requirements.txt      Backend Python dependencies
 ```
+
+Architecture diagrams:
+
+- [docs/architecture.md](docs/architecture.md)
 
 ## 3. Prerequisites
 
@@ -422,4 +427,3 @@ powershell -ExecutionPolicy Bypass -File .\start.ps1
 Then open:
 
 - `http://127.0.0.1:5173`
-

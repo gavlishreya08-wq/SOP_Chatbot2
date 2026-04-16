@@ -1,0 +1,22 @@
+flowchart LR
+    User["User Browser"]
+
+    subgraph System["SOP Chatbot 2"]
+        UI["Container: React SPA<br/>Chat UI, compare UI, admin UI"]
+        API["Container: FastAPI app<br/>Chat, admin, health, feedback endpoints"]
+        RAG["Container: RAG services<br/>RAGChain, retrieval, provider routing"]
+        Store["Container: Chroma DB<br/>Embeddings and document chunks"]
+        FileStore["Container: Local file store<br/>PDFs, image text, flowcharts, metadata, logs"]
+    end
+
+    LLM["External: Gemini / Groq"]
+    SOPSite["External: SOP website"]
+
+    User --> UI
+    UI -->|HTTP + SSE| API
+    API --> RAG
+    RAG --> Store
+    RAG --> LLM
+    API --> FileStore
+    API -->|Sync and PDF discovery| SOPSite
+    FileStore -->|Ingestion input| RAG

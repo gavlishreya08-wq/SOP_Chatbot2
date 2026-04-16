@@ -1,0 +1,39 @@
+sequenceDiagram
+    autonumber
+    actor User
+    participant UI as React UI
+    participant API as FastAPI /api/chat
+    participant RAG as RAGChain
+    participant DB as Chroma
+    participant LLM as Gemini or Groq
+
+    User->>UI: Submit question
+    UI->>API: POST /api/chat (message, history, provider, answer_mode, source_locked)
+
+    alt Primary provider fails
+        API->>API: Mark provider unhealthy
+        API->>RAG: Retry with fallback provider
+    else Primary provider healthy
+        API->>RAG: stream_query(...)
+    end
+
+    opt Conversation needs rewrite
+        RAG->>LLM: Rewrite follow-up into standalone query
+        LLM-->>RAG: Rewritten query
+    end
+
+    RAG->>DB: Retrieve relevant chunks
+    DB-->>RAG: SOP passages + metadata
+
+    alt Query is ambiguous
+        RAG-->>API: Clarification response
+        API-->>UI: SSE final event
+        UI-->>User: Show clarification options
+    else Grounded answer path
+        RAG->>LLM: Generate answer from SOP context only
+        LLM-->>RAG: Answer draft
+        RAG->>RAG: Format sources, confidence, suggestions
+        RAG-->>API: Token events + final payload
+        API-->>UI: SSE stream
+        UI-->>User: Render answer and citations
+    end

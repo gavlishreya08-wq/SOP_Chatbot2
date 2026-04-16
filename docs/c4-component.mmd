@@ -1,0 +1,42 @@
+flowchart TB
+    subgraph Backend["FastAPI backend"]
+        ChatRouter["Component: Chat router"]
+        AdminRouter["Component: Admin router"]
+        Auth["Component: JWT auth"]
+        Provider["Component: LLM provider manager"]
+        RagChain["Component: RAGChain"]
+        Retriever["Component: Retriever + source inference"]
+        Metadata["Component: Source formatting"]
+        Ingestion["Component: Loader + splitter + embeddings"]
+        Sync["Component: SOPSync"]
+        Feedback["Component: Feedback / conversation store"]
+        Chroma["Component: Chroma vector store"]
+    end
+
+    UI["React frontend"]
+    LLM["Gemini / Groq"]
+    SOPSite["Remote SOP website"]
+    Files["Local SOP files and runtime data"]
+
+    UI --> ChatRouter
+    UI --> AdminRouter
+
+    ChatRouter --> Provider
+    ChatRouter --> RagChain
+    ChatRouter --> Feedback
+
+    Provider --> LLM
+    RagChain --> Provider
+    RagChain --> Retriever
+    RagChain --> Metadata
+    Retriever --> Chroma
+
+    AdminRouter --> Auth
+    AdminRouter --> Sync
+    AdminRouter --> Ingestion
+    AdminRouter --> Feedback
+
+    Sync --> SOPSite
+    Sync --> Files
+    Ingestion --> Files
+    Ingestion --> Chroma

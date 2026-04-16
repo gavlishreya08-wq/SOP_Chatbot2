@@ -1,0 +1,13 @@
+flowchart LR
+    User["Person: Employee or operator"]
+    Admin["Person: Admin"]
+    System["System: SOP Chatbot 2"]
+    LLM["External system: Gemini / Groq"]
+    SOPSite["External system: SOP website"]
+    Files["Data source: Local SOP files, flowcharts, metadata"]
+
+    User -->|Ask SOP questions| System
+    Admin -->|Sync, rebuild, review analytics| System
+    System -->|Grounded prompts| LLM
+    System -->|Discover and download PDFs| SOPSite
+    Files -->|Indexed content| System
