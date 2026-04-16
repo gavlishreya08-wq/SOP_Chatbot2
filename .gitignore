@@ -34,7 +34,6 @@ dist/
 # Logs and runtime files
 *.log
 sync_log.json
-.run/
 
 # Notebook checkpoints
 .ipynb_checkpoints/
