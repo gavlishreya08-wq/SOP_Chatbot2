@@ -199,6 +199,13 @@ The script will:
 4. store process IDs in `.run/processes.json`
 5. write logs under `.run/`
 
+Both services bind to all interfaces, so the app is reachable over your local Wi-Fi/LAN. The start script prints one or more URLs in the form:
+
+- `http://<your-pc-ip>:5173` for the frontend
+- `http://<your-pc-ip>:8000` for the backend
+
+If Windows Defender Firewall prompts you, allow access on private networks.
+
 ### 7.2 Stop managed services
 
 ```powershell
@@ -239,6 +246,10 @@ After startup, check these URLs:
 - Frontend: [http://127.0.0.1:5173](http://127.0.0.1:5173)
 - Backend health: [http://127.0.0.1:8000/api/health](http://127.0.0.1:8000/api/health)
 - FastAPI docs: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+
+From another phone, tablet, or laptop on the same Wi-Fi network, open the LAN frontend URL printed by `start.ps1`, for example:
+
+- `http://192.168.1.25:5173`
 
 Expected health response includes:
 

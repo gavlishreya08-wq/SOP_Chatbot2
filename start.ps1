@@ -43,6 +43,28 @@ function Get-NpmExecutable {
     throw "npm was not found on PATH. Install Node.js before starting the app."
 }
 
+function Get-LanAddresses {
+    try {
+        $configs = Get-NetIPConfiguration | Where-Object {
+            $_.NetAdapter.Status -eq "Up" -and $_.IPv4Address -and $_.IPv4DefaultGateway
+        }
+    }
+    catch {
+        return @()
+    }
+
+    $addresses = foreach ($config in $configs) {
+        foreach ($address in $config.IPv4Address) {
+            $ip = $address.IPAddress
+            if ($ip -and $ip -notlike "127.*" -and $ip -notlike "169.254.*") {
+                $ip
+            }
+        }
+    }
+
+    return @($addresses | Sort-Object -Unique)
+}
+
 function Test-ManagedProcessRunning {
     param([int]$ProcessId)
 
@@ -171,9 +193,21 @@ $state | ConvertTo-Json -Depth 6 | Set-Content $pidFile -Encoding UTF8
 Write-ManagerLog "Backend started with PID $($backendProcess.Id)."
 Write-ManagerLog "Frontend started with PID $($frontendProcess.Id)."
 
+$lanAddresses = Get-LanAddresses
+
 Write-Host "Started development servers:"
-Write-Host "  backend : PID $($backendProcess.Id) -> http://127.0.0.1:8000"
-Write-Host "  frontend: PID $($frontendProcess.Id) -> http://127.0.0.1:5173"
+Write-Host "  backend  (local): PID $($backendProcess.Id) -> http://127.0.0.1:8000"
+Write-Host "  frontend (local): PID $($frontendProcess.Id) -> http://127.0.0.1:5173"
+if ($lanAddresses.Count -gt 0) {
+    Write-Host "Wi-Fi/LAN URLs:"
+    foreach ($address in $lanAddresses) {
+        Write-Host "  backend  : http://${address}:8000"
+        Write-Host "  frontend : http://${address}:5173"
+    }
+}
+else {
+    Write-Host "No active LAN IPv4 address detected. Connect to Wi-Fi or Ethernet to expose the app on your local network."
+}
 Write-Host "Session: $sessionId"
 Write-Host "Logs: $backendOutLog, $backendErrLog, $frontendOutLog, $frontendErrLog"
 Write-Host "Manager log: $managerLog"
