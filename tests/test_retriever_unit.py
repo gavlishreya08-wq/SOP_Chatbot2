@@ -106,6 +106,96 @@ class RetrieverUnitTests(unittest.TestCase):
         self.assertEqual(docs, [])
         self.assertIsNone(source)
 
+    def test_retrieve_switches_from_active_source_for_explicit_workflow_change(self):
+        active_doc = make_doc(
+            "Review the system architecture and capture the design decisions.",
+            "SOP How to design system architecture.pdf",
+            page=1,
+            source_title="SYSTEM ARCHITECTURE DESIGN",
+            source_aliases="System architecture SOP",
+        )
+        target_doc = make_doc(
+            "Production issue workflow begins when the PM raises a GELJIRA production issue ticket.",
+            "SOP_Production Issue.pdf",
+            page=0,
+            source_title="HOW TO MANAGE PRODUCTION ISSUE",
+            source_aliases="Production issue SOP | How to manage production issue",
+        )
+        store = FakeVectorStore(
+            global_results=[
+                (active_doc, 0.88),
+                (target_doc, 1.09),
+            ],
+            filtered_results={
+                "SOP How to design system architecture.pdf": [(active_doc, 0.84)],
+                "SOP_Production Issue.pdf": [(target_doc, 0.62)],
+            },
+            metadatas=[
+                active_doc.metadata,
+                target_doc.metadata,
+            ],
+            documents=[
+                active_doc.page_content,
+                target_doc.page_content,
+            ],
+        )
+
+        docs, source = retrieve(
+            store,
+            "How to manage a production issue?",
+            active_sop="SOP How to design system architecture.pdf",
+            source_catalog=build_source_catalog(store),
+        )
+
+        self.assertEqual(source, "SOP_Production Issue.pdf")
+        self.assertEqual([doc.metadata["source"] for doc in docs], ["SOP_Production Issue.pdf"])
+
+    def test_retrieve_rejects_fallback_match_based_only_on_generic_terms(self):
+        generic_doc = make_doc(
+            "Yearly training calendar and company policy overview for role development.",
+            "Final_v2_Roles and Responsibilities_Lead_Report.pdf",
+            page=0,
+            source_title="REPORT LEAD",
+            section_title="Document Guide",
+        )
+        store = FakeVectorStore(
+            global_results=[(generic_doc, 1.41)],
+            metadatas=[generic_doc.metadata],
+            documents=[generic_doc.page_content],
+        )
+
+        docs, source = retrieve(
+            store,
+            "Holiday calendar for this year",
+            source_catalog=build_source_catalog(store),
+        )
+
+        self.assertEqual(docs, [])
+        self.assertIsNone(source)
+
+    def test_retrieve_rejects_fallback_match_from_prefix_only_content_overlap(self):
+        fuzzy_doc = make_doc(
+            "Workflow allowlist updates for server access approvals.",
+            "SOP_ServerWhitelistingg.pdf",
+            page=0,
+            source_title="Server Whitelisting",
+            source_aliases="Workflow allowlist access approvals",
+        )
+        store = FakeVectorStore(
+            global_results=[(fuzzy_doc, 1.02)],
+            metadatas=[fuzzy_doc.metadata],
+            documents=[fuzzy_doc.page_content],
+        )
+
+        docs, source = retrieve(
+            store,
+            "Remote work laptop allowance policy",
+            source_catalog=build_source_catalog(store),
+        )
+
+        self.assertEqual(docs, [])
+        self.assertIsNone(source)
+
 
 if __name__ == "__main__":
     unittest.main()

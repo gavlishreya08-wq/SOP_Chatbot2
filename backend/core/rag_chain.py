@@ -21,6 +21,8 @@ from backend.rag.retriever import (
 
 logger = logging.getLogger(__name__)
 
+UNAVAILABLE_RESPONSE = "This information is not available in the provided SOP."
+
 SYSTEM_PROMPT = """\
 You are Prakriya AI, a STRICT internal SOP assistant.
 
@@ -49,6 +51,7 @@ Rules:
 - If the question is already standalone, return it unchanged.
 - Output ONLY the rewritten search query, nothing else.
 
+
 Active SOP:
 {active_sop}
 
@@ -71,6 +74,8 @@ Instructions:
 - Use bullet points or numbered lists when the SOP content is procedural.
 - Include inline page references such as [Page 2] when the supporting chunk provides a page number.
 - End your response with a new line in the format: FOLLOWUP: question or NONE
+- Only answer if the context explicitly contains the exact information requested.
+- Do not interpret roles, labels, or workflow names as identity or definition unless explicitly stated.
 
 CONTEXT:
 {context}
@@ -93,9 +98,15 @@ ANSWER_MODE_INSTRUCTIONS = {
 
 SUGGESTIONS_PROMPT = """\
 Based on the SOP context below, generate exactly 3 short follow-up questions a user might ask next.
-These should be specific to the same SOP and naturally continue the conversation.
-Each question should be under 60 characters.
-Output ONLY the 3 questions, one per line. No numbering, no bullets.
+
+STRICT RULES:
+- Each question MUST be directly answerable using ONLY the provided context.
+- Do NOT introduce new roles, entities, or concepts not explicitly present in the context.
+- Do NOT assume relationships unless clearly stated.
+- Questions must map to explicit information available in the SOP.
+- If sufficient information is not available, return: NONE
+
+Output ONLY the questions, one per line.
 
 SOP Title: {sop_title}
 Context: {context}
@@ -189,20 +200,25 @@ class RAGChain:
         if not history and not active_sop:
             return False
 
-        q = question.strip().lower()
-        reference_patterns = [
-            r"\b(it|this|that|those|these|same|above|previous|earlier)\b",
-            r"\bwhat about\b",
-            r"\bhow about\b",
-            r"\bthen\b",
-        ]
-        if any(re.search(pattern, q) for pattern in reference_patterns):
-            return True
+        return self._is_context_dependent_followup(question)
 
-        if len(tokenize(question)) <= 3 and (history or active_sop):
-            return True
+    def _effective_active_sop(
+        self,
+        question: str,
+        history: list[dict],
+        active_sop: str | None,
+        *,
+        source_locked: bool,
+    ) -> str | None:
+        if not active_sop:
+            return None
+        if source_locked:
+            return active_sop
 
-        return False
+        if self._is_context_dependent_followup(question):
+            return active_sop
+
+        return None
 
     async def rewrite_query(
         self,
@@ -278,6 +294,37 @@ class RAGChain:
             for term in sorted(tokenize(question), key=len, reverse=True)
             if term not in GENERIC_QUERY_TERMS and term not in BROAD_KEYWORDS
         ]
+
+    def _is_context_dependent_followup(self, question: str) -> bool:
+        q = question.strip().lower()
+        reference_patterns = [
+            r"\b(it|this|that|those|these|same|above|previous|earlier)\b",
+            r"\bwhat about\b",
+            r"\bhow about\b",
+            r"\bthen\b",
+            r"\bmore\b",
+            r"\bcontinue\b",
+            r"\bnext\b",
+            r"\balso\b",
+        ]
+        if any(re.search(pattern, q) for pattern in reference_patterns):
+            return True
+
+        terms = tokenize(question)
+        if not terms:
+            return True
+
+        specific_terms = self._specific_terms(question)
+        if not specific_terms:
+            return True
+
+        if len(terms) <= 3 and all(
+            term in GENERIC_QUERY_TERMS or term in BROAD_KEYWORDS
+            for term in terms
+        ):
+            return True
+
+        return False
 
     def _clarification_prompt(self, question: str) -> str:
         terms = tokenize(question)
@@ -366,7 +413,7 @@ class RAGChain:
             return answer
         if answer.lower().startswith("low confidence:"):
             return answer
-        if answer == "This information is not available in the provided SOP.":
+        if answer == UNAVAILABLE_RESPONSE:
             return answer
         return f"Low confidence: {answer}"
 
@@ -417,8 +464,32 @@ class RAGChain:
         answer = re.sub(r"^ANSWER:\s*", "", answer, flags=re.IGNORECASE).strip()
         return answer, followup
 
-    def _is_grounded_answer(self, answer: str, context: str) -> bool:
-        if "not available" in answer.lower():
+    def _normalize_answer(self, answer: str) -> str:
+        cleaned = answer.strip()
+        lowered = re.sub(r"^low confidence:\s*", "", cleaned, flags=re.IGNORECASE).strip().lower()
+        unavailable_cues = (
+            "not available",
+            "not explicitly mentioned",
+            "not explicitly stated",
+            "not explicitly provided",
+            "not mentioned",
+            "not specified",
+            "not stated",
+            "not described",
+            "not provided",
+        )
+        if any(cue in lowered for cue in unavailable_cues):
+            return UNAVAILABLE_RESPONSE
+        return cleaned
+
+    def _grounding_terms(self, text: str) -> set[str]:
+        return {
+            term for term in tokenize(text)
+            if term not in GENERIC_QUERY_TERMS and term not in BROAD_KEYWORDS
+        }
+
+    def _is_grounded_answer(self, question: str, answer: str, context: str) -> bool:
+        if answer == UNAVAILABLE_RESPONSE:
             return True
 
         answer_terms = tokenize(answer)
@@ -428,7 +499,35 @@ class RAGChain:
 
         overlap = len(answer_terms & context_terms)
         required_overlap = max(3, int(len(answer_terms) * 0.18))
-        return overlap >= required_overlap
+        if overlap < required_overlap:
+            return False
+
+        question_specific_terms = set(self._specific_terms(question))
+        if question_specific_terms:
+            supported_question_terms = question_specific_terms & context_terms
+            if not supported_question_terms:
+                return False
+
+            answer_question_terms = question_specific_terms & answer_terms
+            required_question_terms = min(2, len(supported_question_terms))
+            if len(answer_question_terms) < required_question_terms:
+                return False
+
+        answer_specific_terms = self._grounding_terms(answer)
+        if answer_specific_terms:
+            supported_answer_specific_terms = answer_specific_terms & context_terms
+            minimum_supported_specific_terms = 1 if len(answer_specific_terms) <= 2 else 2
+            if len(supported_answer_specific_terms) < minimum_supported_specific_terms:
+                return False
+
+            unsupported_answer_specific_terms = answer_specific_terms - context_terms
+            if (
+                len(unsupported_answer_specific_terms) >= 2
+                and len(unsupported_answer_specific_terms) > len(supported_answer_specific_terms)
+            ):
+                return False
+
+        return True
 
     def _is_image_relevant(self, question: str, image_path: str) -> bool:
         q = question.lower()
@@ -545,8 +644,12 @@ class RAGChain:
                 "suggestions": None,
             }
 
-        # Source lock: force active_sop if locked
-        effective_sop = active_sop if source_locked else active_sop
+        effective_sop = self._effective_active_sop(
+            message,
+            history,
+            active_sop,
+            source_locked=source_locked,
+        )
 
         search_query = await self.rewrite_query(message, history, effective_sop)
         should_clarify, candidates, clarification_options = self._should_clarify(
@@ -573,7 +676,7 @@ class RAGChain:
             log_query(message, active_sop, None, "low",
                       answer_mode=answer_mode, llm_provider=llm_provider)
             return {
-                "answer": "This information is not available in the provided SOP.",
+                "answer": UNAVAILABLE_RESPONSE,
                 "sources": None,
                 "followup": None,
                 "active_sop": None,
@@ -617,24 +720,27 @@ class RAGChain:
         ]
         response = await self.llm.ainvoke(messages)
         answer, followup = self._parse_response(response.content)
+        answer = self._normalize_answer(answer)
 
-        if answer == "This information is not available in the provided SOP.":
+        if answer == UNAVAILABLE_RESPONSE:
             docs = []
             followup = None
             image = None
             confidence = "low"
+            detected_sop = None
 
-        if not self._is_grounded_answer(answer, context):
-            answer = "This information is not available in the provided SOP."
+        if not self._is_grounded_answer(message, answer, context):
+            answer = UNAVAILABLE_RESPONSE
             docs = []
             followup = None
             image = None
             confidence = "low"
+            detected_sop = None
 
         answer = self._apply_confidence_notice(answer, confidence)
 
         # Generate suggestions from same SOP
-        suggestions = await self._generate_suggestions(message, context, detected_sop)
+        suggestions = await self._generate_suggestions(message, context, detected_sop) if docs else None
 
         sources = format_sources(docs)
 
@@ -679,7 +785,12 @@ class RAGChain:
             }
             return
 
-        effective_sop = active_sop if source_locked else active_sop
+        effective_sop = self._effective_active_sop(
+            message,
+            history,
+            active_sop,
+            source_locked=source_locked,
+        )
 
         search_query = await self.rewrite_query(message, history, effective_sop)
         should_clarify, candidates, clarification_options = self._should_clarify(
@@ -706,7 +817,7 @@ class RAGChain:
         docs, detected_sop = self.retrieve_docs(search_query, effective_sop)
 
         if not docs:
-            msg = "This information is not available in the provided SOP."
+            msg = UNAVAILABLE_RESPONSE
             save_failed_query(message, "low", active_sop)
             log_query(message, active_sop, None, "low",
                       answer_mode=answer_mode, llm_provider=llm_provider)
@@ -805,24 +916,27 @@ class RAGChain:
             answer_text,
             flags=re.IGNORECASE,
         ).strip()
+        answer_text = self._normalize_answer(answer_text)
 
-        if answer_text == "This information is not available in the provided SOP.":
+        if answer_text == UNAVAILABLE_RESPONSE:
             docs = []
             followup = None
             image = None
             confidence = "low"
+            detected_sop = None
 
-        if not self._is_grounded_answer(answer_text, context):
-            answer_text = "This information is not available in the provided SOP."
+        if not self._is_grounded_answer(message, answer_text, context):
+            answer_text = UNAVAILABLE_RESPONSE
             docs = []
             followup = None
             image = None
             confidence = "low"
+            detected_sop = None
 
         answer_text = self._apply_confidence_notice(answer_text, confidence)
 
         # Generate suggestions from same SOP
-        suggestions = await self._generate_suggestions(message, context, detected_sop)
+        suggestions = await self._generate_suggestions(message, context, detected_sop) if docs else None
 
         sources = format_sources(docs)
 

@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 import argparse
+import json
 from collections import Counter
+from datetime import datetime
 from pathlib import Path
 
 from backend.config import settings
@@ -16,6 +18,10 @@ from tests.chatbot_scenarios import (
     ScenarioGroup,
 )
 from tests.helpers import FakeLLM
+
+
+def default_log_dir() -> Path:
+    return Path(settings.data_dir) / "eval_logs"
 
 
 def evaluate_group(group: ScenarioGroup, vectorstore, source_catalog) -> list[dict]:
@@ -103,12 +109,43 @@ def build_report(rows: list[dict]) -> str:
     return "\n".join(lines) + "\n"
 
 
+def write_log_files(rows: list[dict], report: str, log_dir: Path) -> tuple[Path, Path]:
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    log_dir.mkdir(parents=True, exist_ok=True)
+
+    markdown_path = log_dir / f"chatbot_eval_{timestamp}.md"
+    json_path = log_dir / f"chatbot_eval_{timestamp}.json"
+    latest_markdown_path = log_dir / "chatbot_eval_latest.md"
+    latest_json_path = log_dir / "chatbot_eval_latest.json"
+
+    summary = {
+        "generated_at": datetime.now().isoformat(),
+        "total": len(rows),
+        "passed": sum(1 for row in rows if row["passed"]),
+        "failed": sum(1 for row in rows if not row["passed"]),
+        "rows": rows,
+    }
+
+    markdown_path.write_text(report, encoding="utf-8")
+    json_text = json.dumps(summary, indent=2, ensure_ascii=True)
+    json_path.write_text(json_text, encoding="utf-8")
+    latest_markdown_path.write_text(report, encoding="utf-8")
+    latest_json_path.write_text(json_text, encoding="utf-8")
+
+    return markdown_path, json_path
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Run the SOP chatbot retrieval evaluation matrix.")
     parser.add_argument(
         "--output",
         default="",
         help="Optional path to write the markdown report.",
+    )
+    parser.add_argument(
+        "--log-dir",
+        default=str(default_log_dir()),
+        help="Directory where evaluation log files are written.",
     )
     args = parser.parse_args()
 
@@ -126,6 +163,9 @@ def main() -> int:
 
     report = build_report(rows)
     print(report)
+
+    markdown_log_path, json_log_path = write_log_files(rows, report, Path(args.log_dir))
+    print(f"Saved evaluation logs to {markdown_log_path} and {json_log_path}")
 
     if args.output:
         output_path = Path(args.output)

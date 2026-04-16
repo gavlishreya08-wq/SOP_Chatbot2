@@ -38,6 +38,8 @@ STOPWORDS = {
     "the",
     "to",
     "what",
+    "this",
+    "these",
     "when",
     "where",
     "which",
@@ -65,8 +67,11 @@ BROAD_KEYWORDS = {
 }
 
 GENERIC_QUERY_TERMS = {
+    "calendar",
+    "company",
     "job",
     "meeting",
+    "office",
     "objective",
     "objectives",
     "policy",
@@ -82,6 +87,7 @@ GENERIC_QUERY_TERMS = {
     "step",
     "steps",
     "workflow",
+    "year",
 }
 
 VISUAL_KEYWORDS = {
@@ -133,6 +139,12 @@ def _terms_overlap(query_terms: set[str], target_terms: set[str]) -> set[str]:
     return matches
 
 
+def _strict_terms_overlap(query_terms: set[str], target_terms: set[str]) -> set[str]:
+    if not query_terms or not target_terms:
+        return set()
+    return query_terms & target_terms
+
+
 def humanize_source_name(source: str) -> str:
     stem = Path(source).stem
     stem = stem.replace("&", " and ")
@@ -143,10 +155,19 @@ def humanize_source_name(source: str) -> str:
     return re.sub(r"\s+", " ", stem).strip()
 
 
-def keyword_overlap_score(query_terms: set[str], target_terms: set[str]) -> float:
+def keyword_overlap_score(
+    query_terms: set[str],
+    target_terms: set[str],
+    *,
+    allow_fuzzy: bool = True,
+) -> float:
     if not query_terms or not target_terms:
         return 0.0
-    overlap = _terms_overlap(query_terms, target_terms)
+    overlap = (
+        _terms_overlap(query_terms, target_terms)
+        if allow_fuzzy
+        else _strict_terms_overlap(query_terms, target_terms)
+    )
     if not overlap:
         return 0.0
     coverage = len(overlap) / len(query_terms)
@@ -315,7 +336,7 @@ def _active_source_shifted(
         return False
 
     target_source, target_score = inferred_sources[0]
-    if target_source == active_sop or target_score < 1.05:
+    if target_source == active_sop:
         return False
 
     specific_terms = set(_specific_query_terms(query_terms))
@@ -332,12 +353,88 @@ def _active_source_shifted(
         specific_terms,
         target_info.get("title_alias_tokens", set()),
     )
+    active_title_score = 0.0
+    active_title_text = str(active_info.get("normalized_title_alias_text") or "")
+    if active_title_text:
+        active_title_score = keyword_overlap_score(specific_terms, set(active_title_text.split()))
 
-    return len(target_overlap) > len(active_overlap)
+    target_title_score = 0.0
+    target_title_text = str(target_info.get("normalized_title_alias_text") or "")
+    if target_title_text:
+        target_title_score = keyword_overlap_score(specific_terms, set(target_title_text.split()))
+
+    if target_score >= 1.05 and len(target_overlap) > len(active_overlap):
+        return True
+
+    if target_overlap and not active_overlap and target_score >= 0.85:
+        return True
+
+    if target_title_score >= 0.6 and (target_title_score - active_title_score) >= 0.25:
+        return True
+
+    return False
 
 
 def _page_text(doc: Document) -> str:
     return normalize_text(doc.page_content[:1600])
+
+
+def _document_query_terms(doc: Document) -> set[str]:
+    return (
+        tokenize(doc.page_content)
+        | tokenize(str(doc.metadata.get("source", "")))
+        | tokenize(str(doc.metadata.get("source_title", "")))
+        | tokenize(str(doc.metadata.get("source_aliases", "")))
+        | tokenize(str(doc.metadata.get("section_title", "")))
+    )
+
+
+def _required_primary_matches(primary_terms: list[str]) -> int:
+    if not primary_terms:
+        return 0
+    if len(primary_terms) == 1:
+        return 1
+    return 2
+
+
+def _fallback_doc_is_relevant(
+    doc: Document,
+    query: str,
+    query_terms: set[str],
+    inferred_sources: list[tuple[str, float]],
+) -> bool:
+    if doc.metadata.get("type") == "image" and not is_visual_query(query):
+        return False
+
+    primary_terms = _primary_query_terms(query_terms)
+    doc_terms = _document_query_terms(doc)
+    matched_primary_terms = [
+        term for term in primary_terms
+        if term in _strict_terms_overlap({term}, doc_terms)
+    ]
+    required_primary_matches = _required_primary_matches(primary_terms)
+    source_score = max(
+        source_match_score(query, str(doc.metadata.get("source", ""))),
+        source_match_score(query, str(doc.metadata.get("source_title", ""))),
+    )
+    content_score = keyword_overlap_score(
+        query_terms,
+        tokenize(doc.page_content),
+        allow_fuzzy=False,
+    )
+    top_inferred_score = inferred_sources[0][1] if inferred_sources else 0.0
+
+    if required_primary_matches and len(matched_primary_terms) < required_primary_matches:
+        if top_inferred_score < 1.1 or len(matched_primary_terms) == 0:
+            return False
+
+    if not inferred_sources and source_score < 0.85 and content_score < 0.45:
+        return False
+
+    if inferred_sources and source_score < 0.55 and content_score < 0.25 and top_inferred_score < 1.1:
+        return False
+
+    return True
 
 
 def _score_document(
@@ -351,7 +448,11 @@ def _score_document(
     source = doc.metadata.get("source", "")
     source_title = doc.metadata.get("source_title", source)
     semantic_score = 1.0 / (1.0 + max(distance, 0.0))
-    content_score = keyword_overlap_score(query_terms, tokenize(doc.page_content))
+    content_score = keyword_overlap_score(
+        query_terms,
+        tokenize(doc.page_content),
+        allow_fuzzy=False,
+    )
     title_score = max(
         source_match_score(query, source),
         source_match_score(query, source_title),
@@ -459,7 +560,7 @@ def _bm25_score(
     """Simple BM25-style score for keyword fallback."""
     if not query_terms or not doc_terms:
         return 0.0
-    overlap = _terms_overlap(query_terms, doc_terms)
+    overlap = _strict_terms_overlap(query_terms, doc_terms)
     if not overlap:
         return 0.0
     score = 0.0
@@ -504,8 +605,14 @@ def bm25_fallback_search(
 
     scored: list[tuple[float, Document, float]] = []
     for doc, distance in results:
+        if doc.metadata.get("type") == "image" and not is_visual_query(query):
+            continue
         content_terms = tokenize(doc.page_content)
-        title_terms = tokenize(doc.metadata.get("source", ""))
+        title_terms = (
+            tokenize(str(doc.metadata.get("source", "")))
+            | tokenize(str(doc.metadata.get("source_title", "")))
+            | tokenize(str(doc.metadata.get("source_aliases", "")))
+        )
         doc_len = len(doc.page_content.split())
         content_score = _bm25_score(query_terms, content_terms, doc_len, avg_len)
         title_score = keyword_overlap_score(query_terms, title_terms)
@@ -660,9 +767,13 @@ def retrieve(
         source_match_score(query, top_doc.metadata.get("source", "")),
         source_match_score(query, top_doc.metadata.get("source_title", "")),
     )
-    top_content_score = keyword_overlap_score(query_terms, tokenize(top_doc.page_content))
+    top_content_score = keyword_overlap_score(
+        query_terms,
+        tokenize(top_doc.page_content),
+        allow_fuzzy=False,
+    )
     top_doc_terms = tokenize(top_doc.page_content) | tokenize(top_doc.metadata.get("source", ""))
-    top_overlap = _terms_overlap(query_terms, top_doc_terms)
+    top_overlap = _strict_terms_overlap(query_terms, top_doc_terms)
     primary_terms = _primary_query_terms(query_terms)
 
     strong_semantic_match = top_distance <= 1.08
@@ -675,10 +786,16 @@ def retrieve(
         if fallback_results:
             fallback_docs = [doc for doc, _ in fallback_results]
             fallback_source = fallback_docs[0].metadata.get("source")
-            return fallback_docs[:get_k_for_question(query)], fallback_source
+            if _fallback_doc_is_relevant(
+                fallback_docs[0],
+                query,
+                query_terms,
+                inferred_sources,
+            ):
+                return fallback_docs[:get_k_for_question(query)], fallback_source
         return [], None
     if primary_terms:
-        required_primary_matches = 1 if len(primary_terms) == 1 else 2
+        required_primary_matches = _required_primary_matches(primary_terms)
         matched_primary_terms = [
             term for term in primary_terms
             if term in top_overlap
@@ -691,7 +808,13 @@ def retrieve(
             if fallback_results:
                 fallback_docs = [doc for doc, _ in fallback_results]
                 fallback_source = fallback_docs[0].metadata.get("source")
-                return fallback_docs[:get_k_for_question(query)], fallback_source
+                if _fallback_doc_is_relevant(
+                    fallback_docs[0],
+                    query,
+                    query_terms,
+                    inferred_sources,
+                ):
+                    return fallback_docs[:get_k_for_question(query)], fallback_source
             return [], None
 
     source_buckets: dict[str, list[tuple[float, Document]]] = defaultdict(list)
