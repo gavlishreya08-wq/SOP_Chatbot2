@@ -3,6 +3,7 @@ from __future__ import annotations
 import math
 import re
 from collections import Counter, defaultdict
+from difflib import get_close_matches
 from pathlib import Path
 
 from langchain_community.vectorstores import Chroma
@@ -66,6 +67,33 @@ BROAD_KEYWORDS = {
     "workflow",
 }
 
+COMPLETENESS_KEYWORDS = {
+    "all",
+    "complete",
+    "details",
+    "entire",
+    "every",
+    "everything",
+    "exhaustive",
+    "full",
+    "list",
+    "points",
+    "standards",
+    "sub",
+}
+
+SMALL_SECTION_PHRASES = {
+    "job objective",
+    "job objectives",
+    "training requirement",
+    "training requirements",
+    "reporting authority",
+    "minimum qualification",
+    "minimum qualifications",
+    "minimum experience",
+    "minimum experiences",
+}
+
 GENERIC_QUERY_TERMS = {
     "calendar",
     "company",
@@ -112,11 +140,55 @@ def normalize_text(text: str) -> str:
 
 
 def tokenize(text: str) -> set[str]:
-    return {
-        token
-        for token in normalize_text(text).split()
-        if len(token) > 1 and token not in STOPWORDS
+    tokens: set[str] = set()
+    for raw_token in normalize_text(text).split():
+        if len(raw_token) <= 1 or raw_token in STOPWORDS:
+            continue
+        token = raw_token
+        if token.endswith("ies") and len(token) > 4:
+            token = f"{token[:-3]}y"
+        elif token.endswith("s") and len(token) > 4:
+            token = token[:-1]
+        tokens.add(token)
+        tokens.add(raw_token)
+    return tokens
+
+
+def normalize_query(text: str) -> str:
+    normalized = normalize_text(text)
+    replacements = {
+        "responsibilites": "responsibilities",
+        "responsibilty": "responsibility",
+        "resposibilities": "responsibilities",
+        "autority": "authority",
+        "authorty": "authority",
+        "work flow": "workflow",
+        "jra": "jira",
+        "sop": "sop",
     }
+    words = []
+    vocabulary = GENERIC_QUERY_TERMS | BROAD_KEYWORDS | {
+        "authority",
+        "database",
+        "deployment",
+        "development",
+        "engineer",
+        "lead",
+        "qualification",
+        "reporting",
+        "requirement",
+        "technical",
+        "testing",
+        "training",
+    }
+    for word in normalized.split():
+        replacement = replacements.get(word)
+        if replacement:
+            words.append(replacement)
+            continue
+        close = get_close_matches(word, vocabulary, n=1, cutoff=0.86)
+        words.append(close[0] if close else word)
+    return " ".join(words)
 
 
 def _terms_overlap(query_terms: set[str], target_terms: set[str]) -> set[str]:
@@ -212,17 +284,61 @@ def source_match_score(
 
 
 def get_k_for_question(question: str) -> int:
+    question = normalize_query(question)
     q_terms = tokenize(question)
+    if _is_small_targeted_section_query(question):
+        return 3
+    if _wants_complete_structured_answer(question):
+        return 18
     if len(q_terms) >= 6 or any(word in q_terms for word in BROAD_KEYWORDS):
-        return 6
-    return 4
+        return 12
+    return 6
 
 
 def get_candidate_pool_size(question: str) -> int:
+    question = normalize_query(question)
     q_terms = tokenize(question)
+    if _is_small_targeted_section_query(question):
+        return 40
+    if _wants_complete_structured_answer(question):
+        return 180
     if len(q_terms) >= 6 or any(word in q_terms for word in BROAD_KEYWORDS):
-        return 60
-    return 40
+        return 100
+    return 60
+
+
+def _is_small_targeted_section_query(query: str) -> bool:
+    terms = tokenize(query)
+    normalized = normalize_text(query)
+    if terms & COMPLETENESS_KEYWORDS:
+        return False
+    return any(phrase in normalized for phrase in SMALL_SECTION_PHRASES)
+
+
+def _wants_complete_structured_answer(query: str) -> bool:
+    terms = tokenize(query)
+    normalized = normalize_text(query)
+    if re.search(r"\b\d+(?:\.\d+)+\b", normalized):
+        return True
+    if terms & COMPLETENESS_KEYWORDS:
+        return True
+    structured_terms = {
+        "checklist",
+        "guideline",
+        "guidelines",
+        "meeting",
+        "practice",
+        "procedure",
+        "process",
+        "responsibilities",
+        "responsibility",
+        "role",
+        "standard",
+        "standards",
+        "step",
+        "workflow",
+    }
+    return bool(terms & structured_terms and terms & BROAD_KEYWORDS)
 
 
 def build_source_catalog(vectorstore: Chroma) -> dict[str, dict[str, str | set[str]]]:
@@ -589,7 +705,7 @@ def bm25_fallback_search(
     if not query_terms:
         return []
 
-    pool_size = 80
+    pool_size = max(100, get_candidate_pool_size(query))
     results: list[tuple[Document, float]] = vectorstore.similarity_search_with_score(
         query, k=pool_size
     )
@@ -622,6 +738,104 @@ def bm25_fallback_search(
 
     scored.sort(key=lambda x: x[0], reverse=True)
     return [(doc, distance) for _, doc, distance in scored[:top_k] if _ > 0.3]
+
+
+def _section_sort_key(doc: Document) -> tuple[int, int, int, str]:
+    section_index = doc.metadata.get("section_index")
+    chunk_in_section = doc.metadata.get("chunk_in_section")
+    page = doc.metadata.get("page")
+    page_label = str(doc.metadata.get("page_label", ""))
+    if not isinstance(section_index, int):
+        section_index = 10**6
+    if not isinstance(chunk_in_section, int):
+        chunk_in_section = 10**6
+    if not isinstance(page, int):
+        page = 10**6
+    return (section_index, chunk_in_section, page, page_label)
+
+
+def _vectorstore_documents_for_source(vectorstore: Chroma, source: str) -> list[Document]:
+    try:
+        records = vectorstore.get(where={"source": source}, include=["documents", "metadatas"])
+    except TypeError:
+        records = vectorstore.get(include=["documents", "metadatas"])
+    except Exception:
+        return []
+    documents = records.get("documents") or []
+    metadatas = records.get("metadatas") or []
+    docs = []
+    for content, metadata in zip(documents, metadatas):
+        if not metadata or metadata.get("source") != source:
+            continue
+        docs.append(Document(page_content=content or "", metadata=metadata))
+    return docs
+
+
+def _matching_section_titles(query: str, preferred_sections: list[str]) -> set[str]:
+    terms = tokenize(query)
+    titles = {normalize_text(title) for title in preferred_sections}
+    if any(term.startswith("responsibil") for term in terms):
+        titles.add("responsibilities")
+    if "objective" in terms or "objectives" in terms:
+        titles.update({"objective", "objectives", "job objectives"})
+    if "training" in terms:
+        titles.add("training requirement")
+    if "reporting" in terms or "authority" in terms:
+        titles.add("reporting authority")
+    if "qualification" in terms or "qualifications" in terms:
+        titles.add("minimum qualification")
+    if "experience" in terms:
+        titles.add("minimum experience")
+    if "standard" in terms or "standards" in terms:
+        titles.add("standards")
+    if "guideline" in terms or "guidelines" in terms:
+        titles.add("guidelines")
+    if "workflow" in terms or "process" in terms or "procedure" in terms or "step" in terms:
+        titles.update({"workflow", "process", "procedure", "steps"})
+    return titles
+
+
+def _expand_requested_sections(
+    vectorstore: Chroma,
+    selected_docs: list[Document],
+    source: str,
+    query: str,
+    preferred_sections: list[str],
+) -> list[Document]:
+    wanted_titles = _matching_section_titles(query, preferred_sections)
+    if not wanted_titles and not _wants_complete_structured_answer(query):
+        return selected_docs
+    source_docs = _vectorstore_documents_for_source(vectorstore, source)
+    if not source_docs:
+        return selected_docs
+    selected_indexes = {
+        doc.metadata.get("section_index")
+        for doc in selected_docs
+        if isinstance(doc.metadata.get("section_index"), int)
+        and doc.metadata.get("content_type") == "section"
+    }
+    include_indexes: set[int] = set()
+    for doc in source_docs:
+        if doc.metadata.get("content_type") != "section":
+            continue
+        section_index = doc.metadata.get("section_index")
+        if not isinstance(section_index, int):
+            continue
+        title = normalize_text(str(doc.metadata.get("section_title", "")))
+        if title in wanted_titles or (not wanted_titles and section_index in selected_indexes):
+            include_indexes.add(section_index)
+    if not include_indexes:
+        return selected_docs
+    expanded = [
+        doc for doc in source_docs
+        if doc.metadata.get("content_type") == "section"
+        and doc.metadata.get("section_index") in include_indexes
+    ]
+    by_id: dict[str, Document] = {}
+    for doc in [*selected_docs, *expanded]:
+        chunk_id = str(doc.metadata.get("chunk_id") or id(doc))
+        by_id[chunk_id] = doc
+    return sorted(by_id.values(), key=_section_sort_key)
 
 
 def generate_query_variants(query: str) -> list[str]:
@@ -665,6 +879,7 @@ def retrieve(
     active_sop: str | None = None,
     source_catalog: dict[str, dict[str, str | set[str]]] | None = None,
 ) -> tuple[list[Document], str | None]:
+    query = normalize_query(query)
     query_terms = tokenize(query)
     if not query_terms:
         return [], active_sop
@@ -691,7 +906,7 @@ def retrieve(
             filter={"source": active_sop},
         )
 
-    # Multi-query retrieval: search with original + rewritten variants
+    # Hybrid retrieval: semantic variants plus keyword/BM25 candidates are always merged.
     results: list[tuple[Document, float]] = []
     query_variants = generate_query_variants(query)
     for variant in query_variants:
@@ -701,6 +916,7 @@ def retrieve(
                 k=candidate_pool_size if variant == query else candidate_pool_size // 2,
             )
         )
+    results.extend(bm25_fallback_search(vectorstore, query, active_sop=active_sop, top_k=get_candidate_pool_size(query)))
 
     semantic_sources: list[str] = []
     for doc, _ in results[:10]:
@@ -846,5 +1062,11 @@ def retrieve(
     selected_docs = [doc for _, doc in source_buckets[best_source][: get_k_for_question(query)]]
     if not selected_docs:
         return [], None
-
+    selected_docs = _expand_requested_sections(
+        vectorstore,
+        selected_docs,
+        best_source,
+        query,
+        preferred_sections,
+    )
     return selected_docs, best_source

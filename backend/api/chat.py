@@ -43,6 +43,8 @@ class ChatRequest(BaseModel):
     llm_provider: Literal["gemini", "groq"] | None = None
     answer_mode: str = "detailed"
     source_locked: bool = False
+    cursor_offset: int = 0
+    page_limit: int = 15
 
 
 class ChatResponse(BaseModel):
@@ -53,6 +55,8 @@ class ChatResponse(BaseModel):
     image: str | None = None
     confidence: str | None = None
     suggestions: list[str] | None = None
+    has_more: bool = False
+    next_offset: int | None = None
 
 
 class CompareRequest(BaseModel):
@@ -156,6 +160,8 @@ async def chat(request: ChatRequest, req: Request):
                     answer_mode=answer_mode,
                     source_locked=request.source_locked,
                     llm_provider=provider_name,
+                    cursor_offset=request.cursor_offset,
+                    page_limit=request.page_limit,
                 ):
                     yield f"data: {json.dumps(event)}\n\n"
                 mark_provider_healthy(provider_name)
@@ -177,6 +183,8 @@ async def chat(request: ChatRequest, req: Request):
                             answer_mode=answer_mode,
                             source_locked=request.source_locked,
                             llm_provider=fallback_name,
+                            cursor_offset=request.cursor_offset,
+                            page_limit=request.page_limit,
                         ):
                             yield f"data: {json.dumps(event)}\n\n"
                         mark_provider_healthy(fallback_name)
@@ -194,6 +202,8 @@ async def chat(request: ChatRequest, req: Request):
             answer_mode=answer_mode,
             source_locked=request.source_locked,
             llm_provider=provider_name,
+            cursor_offset=request.cursor_offset,
+            page_limit=request.page_limit,
         )
         mark_provider_healthy(provider_name)
         return ChatResponse(**result)
@@ -208,6 +218,8 @@ async def chat(request: ChatRequest, req: Request):
                     answer_mode=answer_mode,
                     source_locked=request.source_locked,
                     llm_provider=fallback_name,
+                    cursor_offset=request.cursor_offset,
+                    page_limit=request.page_limit,
                 )
                 mark_provider_healthy(fallback_name)
                 return ChatResponse(**result)

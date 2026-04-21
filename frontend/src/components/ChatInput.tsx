@@ -112,7 +112,7 @@ export default function ChatInput({
               }}
               disabled={isLoading}
               autoFocus
-              rows={3}
+              rows={2}
               placeholder="Ask about workflows, approvals, SOP responsibilities, or a specific document..."
               className="composer-textarea"
             />

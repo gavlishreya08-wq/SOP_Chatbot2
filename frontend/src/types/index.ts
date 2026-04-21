@@ -8,6 +8,10 @@ export interface Message {
   confidence?: "high" | "medium" | "low";
   suggestions?: string[];
   feedback?: "up" | "down" | null;
+  hasMore?: boolean;
+  nextOffset?: number | null;
+  activeSop?: string | null;
+  originalQuestion?: string | null;
 }
 
 export type LlmProvider = "gemini" | "groq";
@@ -66,6 +70,8 @@ export interface ChatRequest {
   llm_provider?: LlmProvider;
   answer_mode?: AnswerMode;
   source_locked?: boolean;
+  cursor_offset?: number;
+  page_limit?: number;
 }
 
 export interface StreamEvent {
@@ -78,6 +84,8 @@ export interface StreamEvent {
   full_answer?: string;
   confidence?: "high" | "medium" | "low";
   suggestions?: string[];
+  has_more?: boolean;
+  next_offset?: number | null;
 }
 
 export interface SopEntry {

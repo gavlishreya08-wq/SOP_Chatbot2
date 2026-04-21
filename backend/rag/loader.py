@@ -1,7 +1,9 @@
 import json
 import logging
+import io
 from pathlib import Path
 from typing import Optional
+from contextlib import redirect_stdout
 
 import fitz
 from langchain_community.document_loaders import PyPDFLoader
@@ -111,10 +113,11 @@ def _load_single_pdf(path: Path) -> list[Document]:
 def _load_pdf_with_pymupdf(path: Path) -> list[Document]:
     pdf = fitz.open(path)
     try:
-        raw_pages = [
-            page.get_text("text", sort=True) or ""
-            for page in pdf
-        ]
+        raw_pages = []
+        for page in pdf:
+            page_text = page.get_text("text", sort=True) or ""
+            table_text = _extract_page_tables(page)
+            raw_pages.append("\n\n".join(part for part in [page_text, table_text] if part.strip()))
         non_empty_pages = [page for page in raw_pages if page.strip()]
         if not non_empty_pages:
             return []
@@ -150,6 +153,83 @@ def _load_pdf_with_pymupdf(path: Path) -> list[Document]:
         return docs
     finally:
         pdf.close()
+
+
+def _clean_table_cell(value: object) -> str:
+    if value is None:
+        return ""
+    text = str(value).replace("\n", " ")
+    return " ".join(text.split()).strip()
+
+
+def _looks_like_table_header(row: list[str]) -> bool:
+    normalized = " ".join(row).lower()
+    if "activity" in normalized and ("start" in normalized or "end" in normalized or "duration" in normalized):
+        return True
+    filled = [cell for cell in row if cell]
+    return len(filled) >= 2 and not filled[0].isdigit()
+
+
+def _merge_extracted_table_rows(rows: list[list[str]]) -> tuple[list[str], list[list[str]]] | None:
+    cleaned_rows = [[_clean_table_cell(cell) for cell in row] for row in rows]
+    header_index = next(
+        (index for index, row in enumerate(cleaned_rows) if _looks_like_table_header(row)),
+        None,
+    )
+    if header_index is None:
+        return None
+
+    columns = cleaned_rows[header_index]
+    if len([column for column in columns if column]) < 2:
+        return None
+
+    merged_rows: list[list[str]] = []
+    for row in cleaned_rows[header_index + 1:]:
+        if not any(row):
+            continue
+        row = [*row, *([""] * (len(columns) - len(row)))]
+        row = row[: len(columns)]
+        starts_new_row = bool(row[0])
+        if starts_new_row or not merged_rows:
+            merged_rows.append(row)
+            continue
+
+        target = merged_rows[-1]
+        for index, value in enumerate(row):
+            if not value:
+                continue
+            if target[index]:
+                target[index] = f"{target[index]}; {value}"
+            else:
+                target[index] = value
+
+    merged_rows = [row for row in merged_rows if any(cell for cell in row)]
+    if not merged_rows:
+        return None
+    return columns, merged_rows
+
+
+def _extract_page_tables(page) -> str:
+    try:
+        with redirect_stdout(io.StringIO()):
+            found = page.find_tables()
+    except Exception:
+        return ""
+
+    tables: list[str] = []
+    for table in getattr(found, "tables", []):
+        parsed = _merge_extracted_table_rows(table.extract())
+        if not parsed:
+            continue
+        columns, rows = parsed
+        lines = [
+            "EXTRACTED TABLE:",
+            " | ".join(columns),
+            " | ".join("---" for _ in columns),
+        ]
+        lines.extend(" | ".join(row) for row in rows)
+        tables.append("\n".join(lines))
+    return "\n\n".join(tables)
 
 
 def _load_pdf_with_pypdf(path: Path) -> list[Document]:

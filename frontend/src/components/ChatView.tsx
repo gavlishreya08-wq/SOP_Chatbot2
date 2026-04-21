@@ -21,6 +21,7 @@ interface Props {
   onStop: () => void;
   onEditMessage: (messageId: string, newText: string) => void;
   onFeedback: (messageId: string, rating: "up" | "down") => void;
+  onShowMore: (messageId: string) => void;
   modelLabel: string;
   modelName: string;
   activeSop: string | null;
@@ -200,6 +201,7 @@ export default function ChatView({
   onStop,
   onEditMessage,
   onFeedback,
+  onShowMore,
   modelLabel,
   modelName,
   activeSop,
@@ -291,6 +293,7 @@ export default function ChatView({
                 onRetry={message.role === "assistant" && message.id === lastAssistantId ? onRetry : undefined}
                 onEdit={message.role === "user" && !isLoading ? onEditMessage : undefined}
                 onFeedback={message.role === "assistant" ? onFeedback : undefined}
+                onShowMore={message.role === "assistant" && !isLoading ? onShowMore : undefined}
               />
             ))}
 

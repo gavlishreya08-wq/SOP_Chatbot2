@@ -14,6 +14,15 @@ function toHistory(messages: Message[]) {
     .map((message) => ({ role: message.role, content: message.content }));
 }
 
+function previousUserQuestion(messages: Message[], beforeIndex: number) {
+  for (let index = beforeIndex - 1; index >= 0; index -= 1) {
+    if (messages[index]?.role === "user") {
+      return messages[index].content;
+    }
+  }
+  return null;
+}
+
 export function useChat(llmProvider: LlmProvider) {
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -28,7 +37,8 @@ export function useChat(llmProvider: LlmProvider) {
       text: string,
       historySlice: { role: string; content: string }[],
       assistantId: string,
-      activeSopForRequest: string | null
+      activeSopForRequest: string | null,
+      cursorOffset = 0
     ) => {
       setIsLoading(true);
       streamBufferRef.current = "";
@@ -46,6 +56,8 @@ export function useChat(llmProvider: LlmProvider) {
             llm_provider: llmProvider,
             answer_mode: answerMode,
             source_locked: sourceLocked,
+            cursor_offset: cursorOffset,
+            page_limit: 15,
           },
           (token) => {
             streamBufferRef.current += token;
@@ -71,6 +83,10 @@ export function useChat(llmProvider: LlmProvider) {
                       image: event.image,
                       confidence: event.confidence,
                       suggestions: event.suggestions,
+                      hasMore: Boolean(event.has_more),
+                      nextOffset: event.next_offset ?? null,
+                      activeSop: event.active_sop ?? message.activeSop ?? null,
+                      originalQuestion: message.originalQuestion ?? text,
                     }
                   : message
               )
@@ -132,7 +148,7 @@ export function useChat(llmProvider: LlmProvider) {
       setMessages((prev) => [
         ...prev,
         userMsg,
-        { id: assistantId, role: "assistant", content: "" },
+        { id: assistantId, role: "assistant", content: "", originalQuestion: text },
       ]);
 
       const historySlice = toHistory([...messages, userMsg]);
@@ -188,6 +204,36 @@ export function useChat(llmProvider: LlmProvider) {
     await runRequest(question, historySlice, assistantId, activeSop);
   }, [messages, activeSop, isLoading, runRequest]);
 
+  const showMore = useCallback(
+    async (messageId: string) => {
+      if (isLoading) return;
+      const index = messages.findIndex((message) => message.id === messageId && message.role === "assistant");
+      if (index === -1) return;
+      const target = messages[index];
+      if (!target.hasMore || target.nextOffset === null || target.nextOffset === undefined) return;
+      const question = target.originalQuestion || previousUserQuestion(messages, index);
+      if (!question) return;
+      const existingContent = target.content;
+      const continuationId = target.id;
+      const activeSopForRequest = target.activeSop || target.sources?.filename || activeSop;
+      streamBufferRef.current = "";
+      setMessages((prev) =>
+        prev.map((message) =>
+          message.id === continuationId ? { ...message, hasMore: false } : message
+        )
+      );
+      await runRequest(question, [{ role: "user", content: question }], continuationId, activeSopForRequest ?? null, target.nextOffset);
+      setMessages((prev) =>
+        prev.map((message) =>
+          message.id === continuationId && message.content && !message.content.startsWith(existingContent)
+            ? { ...message, content: `${existingContent.trimEnd()}\n\n${message.content}` }
+            : message
+        )
+      );
+    },
+    [messages, activeSop, isLoading, runRequest]
+  );
+
   const editAndResend = useCallback(
     async (messageId: string, newText: string) => {
       if (isLoading) return;
@@ -206,7 +252,7 @@ export function useChat(llmProvider: LlmProvider) {
       setMessages([
         ...kept,
         userMsg,
-        { id: assistantId, role: "assistant", content: "" },
+        { id: assistantId, role: "assistant", content: "", originalQuestion: newText },
       ]);
 
       const historySlice = toHistory([...kept, userMsg]);
@@ -255,6 +301,7 @@ export function useChat(llmProvider: LlmProvider) {
     answerMode,
     send,
     retryLast,
+    showMore,
     editAndResend,
     stopStreaming,
     clearChat,

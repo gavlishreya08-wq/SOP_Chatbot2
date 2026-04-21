@@ -31,6 +31,7 @@ interface Props {
   canRetry?: boolean;
   onEdit?: (messageId: string, newText: string) => void;
   onFeedback?: (messageId: string, rating: "up" | "down") => void;
+  onShowMore?: (messageId: string) => void;
 }
 
 function formatContent(text: string): string {
@@ -159,6 +160,7 @@ export default function MessageBubble({
   canRetry = false,
   onEdit,
   onFeedback,
+  onShowMore,
 }: Props) {
   const isUser = message.role === "user";
   const [copied, setCopied] = useState(false);
@@ -346,6 +348,12 @@ export default function MessageBubble({
             <Button variant="ghost" color="gray" size="1" onClick={onRetry}>
               <RefreshCcw size={12} />
               Retry
+            </Button>
+          ) : null}
+
+          {message.hasMore && onShowMore ? (
+            <Button variant="surface" color="cyan" size="1" onClick={() => onShowMore(message.id)}>
+              Show More
             </Button>
           ) : null}
         </Flex>

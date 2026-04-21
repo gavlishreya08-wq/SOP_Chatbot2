@@ -1,15 +1,15 @@
 ﻿{
-    "sessionId":  "20260416-125715",
-    "startedAt":  "2026-04-16T12:57:17.1748490+05:30",
-    "managerLog":  "C:\\Users\\shiva\\Documents\\Projects\\SOP_Chatbot2\\.run\\manager.log",
+    "sessionId":  "20260421-153622",
+    "startedAt":  "2026-04-21T15:36:25.0070249+05:30",
+    "managerLog":  "C:\\Users\\Shreya gavli\\Desktop\\sop_chatbot_ auto - Copy\\.run\\manager.log",
     "processes":  {
                       "backend":  {
-                                      "pid":  19476,
-                                      "cwd":  "C:\\Users\\shiva\\Documents\\Projects\\SOP_Chatbot2",
-                                      "stdoutLog":  "C:\\Users\\shiva\\Documents\\Projects\\SOP_Chatbot2\\.run\\backend\\20260416-125715.out.log",
-                                      "stderrLog":  "C:\\Users\\shiva\\Documents\\Projects\\SOP_Chatbot2\\.run\\backend\\20260416-125715.err.log",
+                                      "pid":  11256,
+                                      "cwd":  "C:\\Users\\Shreya gavli\\Desktop\\sop_chatbot_ auto - Copy",
+                                      "stdoutLog":  "C:\\Users\\Shreya gavli\\Desktop\\sop_chatbot_ auto - Copy\\.run\\backend\\20260421-153622.out.log",
+                                      "stderrLog":  "C:\\Users\\Shreya gavli\\Desktop\\sop_chatbot_ auto - Copy\\.run\\backend\\20260421-153622.err.log",
                                       "command":  [
-                                                      "C:\\Users\\shiva\\Documents\\Projects\\SOP_Chatbot2\\venv\\Scripts\\python.exe",
+                                                      "C:\\Users\\Shreya gavli\\Desktop\\sop_chatbot_ auto - Copy\\venv\\Scripts\\python.exe",
                                                       "-m",
                                                       "uvicorn",
                                                       "backend.main:app",
@@ -21,10 +21,10 @@
                                                   ]
                                   },
                       "frontend":  {
-                                       "pid":  31724,
-                                       "cwd":  "C:\\Users\\shiva\\Documents\\Projects\\SOP_Chatbot2\\frontend",
-                                       "stdoutLog":  "C:\\Users\\shiva\\Documents\\Projects\\SOP_Chatbot2\\.run\\frontend\\20260416-125715.out.log",
-                                       "stderrLog":  "C:\\Users\\shiva\\Documents\\Projects\\SOP_Chatbot2\\.run\\frontend\\20260416-125715.err.log",
+                                       "pid":  30264,
+                                       "cwd":  "C:\\Users\\Shreya gavli\\Desktop\\sop_chatbot_ auto - Copy\\frontend",
+                                       "stdoutLog":  "C:\\Users\\Shreya gavli\\Desktop\\sop_chatbot_ auto - Copy\\.run\\frontend\\20260421-153622.out.log",
+                                       "stderrLog":  "C:\\Users\\Shreya gavli\\Desktop\\sop_chatbot_ auto - Copy\\.run\\frontend\\20260421-153622.err.log",
                                        "command":  [
                                                        "C:\\Program Files\\nodejs\\npm.cmd",
                                                        "run",

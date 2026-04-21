@@ -61,9 +61,9 @@ a {
   z-index: 1;
   display: grid;
   grid-template-columns: 360px minmax(0, 1fr);
-  gap: 18px;
+  gap: 12px;
   height: 100%;
-  padding: 18px;
+  padding: 12px;
 }
 
 .app-sidebar,
@@ -294,23 +294,37 @@ a {
 .chat-shell {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
   height: 100%;
   overflow: hidden;
 }
 
 .chat-header-card {
+  --card-padding: 12px;
   overflow: hidden;
+  flex: 0 0 auto;
+}
+
+.chat-header-row {
+  align-items: center;
+}
+
+.chat-header-row .rt-Heading {
+  line-height: 1.08;
 }
 
 .chat-header-meta {
-  min-width: min(100%, 250px);
+  min-width: min(100%, 220px);
 }
 
 .chat-title-lockup {
   flex: 1;
   min-width: 220px;
   text-align: left;
+}
+
+.chat-title-lockup .muted-copy {
+  margin-top: 4px !important;
 }
 
 .gradient-title {
@@ -322,6 +336,7 @@ a {
 }
 
 .active-sop-card {
+  --card-padding: 8px;
   min-width: min(100%, 260px);
 }
 
@@ -338,40 +353,42 @@ a {
   overflow-y: auto;
   overflow-x: hidden;
   padding-right: 4px;
+  padding-top: 2px;
 }
 
 .chat-feed {
   min-height: 100%;
-  padding: 4px 2px 12px;
+  padding: 2px 2px 8px;
 }
 
 .welcome-hero {
   min-height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: min(5vw, 44px);
+  padding: min(3vw, 24px);
 }
 
 .welcome-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr);
-  gap: 20px;
+  gap: 12px;
   width: min(1080px, 100%);
 }
 
 .welcome-card {
+  --card-padding: 18px;
   overflow: hidden;
 }
 
 .starter-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  gap: 10px;
 }
 
 .starter-tile {
-  padding: 18px;
+  padding: 12px;
   border: 1px solid rgba(148, 163, 184, 0.14);
   border-radius: 18px;
   background: rgba(10, 16, 29, 0.72);
@@ -388,11 +405,11 @@ a {
 
 .feature-list {
   display: grid;
-  gap: 12px;
+  gap: 10px;
 }
 
 .feature-tile {
-  padding: 16px;
+  padding: 12px;
   border-radius: 18px;
   background: rgba(12, 19, 33, 0.84);
   border: 1px solid rgba(148, 163, 184, 0.12);
@@ -581,17 +598,19 @@ a {
 }
 
 .composer-wrap {
-  padding-top: 2px;
+  padding-top: 0;
+  flex: 0 0 auto;
 }
 
 .composer-card {
+  --card-padding: 12px;
   overflow: hidden;
 }
 
 .composer-toolbar {
   align-items: flex-start;
-  padding-bottom: 12px;
-  margin-bottom: 14px;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
   border-bottom: 1px solid rgba(148, 163, 184, 0.12);
 }
 
@@ -606,18 +625,18 @@ a {
 
 .composer-setting-label {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 3px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #a7bed8;
 }
 
 .composer-select {
-  min-width: 220px;
+  min-width: 180px;
 }
 
 .composer-lock-control {
-  padding: 10px 12px;
+  padding: 7px 10px;
   border-radius: 16px;
   background: rgba(12, 19, 33, 0.72);
   border: 1px solid rgba(148, 163, 184, 0.12);
@@ -633,19 +652,20 @@ a {
 }
 
 .composer-textarea {
-  min-height: 102px;
+  min-height: 64px;
+  max-height: 140px;
   resize: none;
-  line-height: 1.6;
+  line-height: 1.45;
 }
 
 .composer-hints {
-  gap: 10px;
+  gap: 8px;
   flex-wrap: wrap;
-  margin-top: 10px;
+  margin-top: 6px;
 }
 
 .composer-send-button {
-  min-width: 140px;
+  min-width: 112px;
   align-self: stretch;
 }
 

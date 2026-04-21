@@ -112,6 +112,7 @@ export default function App() {
             onStop={chat.stopStreaming}
             onEditMessage={chat.editAndResend}
             onFeedback={chat.setFeedback}
+            onShowMore={chat.showMore}
             modelLabel={selectedModel?.label || health?.llm_provider || "Model"}
             modelName={selectedModel?.model || health?.model || "Configured on backend"}
             activeSop={chat.activeSop}

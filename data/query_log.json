@@ -2118,5 +2118,5015 @@
     "was_clarification": false,
     "answer_mode": "detailed",
     "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T07:35:58.465684+00:00",
+    "question": "Explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T07:35:58.474719+00:00",
+    "question": "What is the purpose of the planned software release?",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T07:35:58.478717+00:00",
+    "question": "Explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T07:35:58.483635+00:00",
+    "question": "What is the role?",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T07:35:58.483635+00:00",
+    "question": "Explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T07:35:58.483635+00:00",
+    "question": "What is the purpose of the planned software release?",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T07:36:03.032027+00:00",
+    "question": "test lead responsibilities",
+    "active_sop": null,
+    "detected_sop": "TestLead_RR.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "brief",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T07:36:03.032027+00:00",
+    "question": "responsibilities",
+    "active_sop": "TestLead_RR.pdf",
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T07:36:03.126741+00:00",
+    "question": "Explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T07:36:03.136834+00:00",
+    "question": "What is the purpose of the planned software release?",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T07:36:03.142290+00:00",
+    "question": "Explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T07:36:03.147291+00:00",
+    "question": "What is the role?",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T07:36:03.165191+00:00",
+    "question": "Explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T07:36:03.169838+00:00",
+    "question": "What is the purpose of the planned software release?",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T07:36:27.314298+00:00",
+    "question": "Explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T07:36:27.320989+00:00",
+    "question": "What is the purpose of the planned software release?",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T07:36:27.326860+00:00",
+    "question": "Explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T07:36:27.326860+00:00",
+    "question": "What is the role?",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T07:36:27.341775+00:00",
+    "question": "Explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T07:36:27.345781+00:00",
+    "question": "What is the purpose of the planned software release?",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T08:47:18.075170+00:00",
+    "question": "can i deploy code without testing",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T08:54:19.725774+00:00",
+    "question": "can i deploy code into production without testing",
+    "active_sop": null,
+    "detected_sop": "SOP_Production Issue.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T09:03:47.057035+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T09:03:47.064137+00:00",
+    "question": "what is the purpose of the planned software release",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T09:03:47.069178+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T09:03:47.073068+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T09:03:47.078182+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T09:03:47.084288+00:00",
+    "question": "what is the purpose of the planned software release",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T09:04:45.951944+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T09:04:45.959593+00:00",
+    "question": "what is the purpose of the planned software release",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T09:04:45.964269+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T09:04:45.969269+00:00",
+    "question": "list all responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T09:04:45.979394+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T09:04:45.983394+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T09:04:46.002014+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T09:04:46.008829+00:00",
+    "question": "what is the purpose of the planned software release",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T09:05:05.648936+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T09:05:05.657747+00:00",
+    "question": "what is the purpose of the planned software release",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T09:05:05.662795+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T09:05:05.667101+00:00",
+    "question": "list all responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T09:05:05.670907+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T09:05:05.685758+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T09:05:05.692812+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T09:05:05.701508+00:00",
+    "question": "what is the purpose of the planned software release",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T09:08:19.200163+00:00",
+    "question": "Data Sharing Standards",
+    "active_sop": null,
+    "detected_sop": "Final_3_Database Coding_Development Standards & Best Practice.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T09:09:26.699492+00:00",
+    "question": "responsibilities of technical lead",
+    "active_sop": "Final_3_Database Coding_Development Standards & Best Practice.pdf",
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-20T09:09:37.240754+00:00",
+    "question": "responsibilities of technical lead",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-20T09:10:38.365254+00:00",
+    "question": "who is prachi naik",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "SOP_Root Cause Fixture.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T09:11:56.820813+00:00",
+    "question": "responsibilities of technical resource manager",
+    "active_sop": "SOP_Root Cause Fixture.pdf",
+    "detected_sop": "2.RR_TechnicalResourceManager_version1.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-20T09:16:21.444635+00:00",
+    "question": "responsibilities of maintenance lead",
+    "active_sop": "2.RR_TechnicalResourceManager_version1.pdf",
+    "detected_sop": "5_RR_Maintainacelead.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-20T09:17:08.882665+00:00",
+    "question": "more",
+    "active_sop": "5_RR_Maintainacelead.pdf",
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T09:24:51.207025+00:00",
+    "question": "testing standards and best practices",
+    "active_sop": null,
+    "detected_sop": "Testing_Standard_&_Best_Practices_V1.5.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T09:25:55.447354+00:00",
+    "question": "data sharing standards",
+    "active_sop": "Testing_Standard_&_Best_Practices_V1.5.pdf",
+    "detected_sop": "Final_3_Database Coding_Development Standards & Best Practice.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T09:27:55.660904+00:00",
+    "question": "what is db engineer role",
+    "active_sop": "Final_3_Database Coding_Development Standards & Best Practice.pdf",
+    "detected_sop": "Final_v2_Role and Responsibility_Engineer_DB.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T09:29:37.591363+00:00",
+    "question": "tell me his responsibilities maintenance lead",
+    "active_sop": "Final_v2_Role and Responsibility_Engineer_DB.pdf",
+    "detected_sop": "5_RR_Maintainacelead.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-20T09:30:14.074338+00:00",
+    "question": "objective of report engineer",
+    "active_sop": "5_RR_Maintainacelead.pdf",
+    "detected_sop": "Final_v2_Roles and Responsibilities_Engineer_Report.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-20T09:31:39.355477+00:00",
+    "question": "roles of database engineer",
+    "active_sop": "Final_v2_Roles and Responsibilities_Engineer_Report.pdf",
+    "detected_sop": "Final_v2_Role and Responsibility_Engineer_DB.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T09:32:46.818707+00:00",
+    "question": "role of technical lead",
+    "active_sop": "Final_v2_Role and Responsibility_Engineer_DB.pdf",
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T09:35:20.448337+00:00",
+    "question": "tl day plan",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "SOP_TLDAYPLAN.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T09:40:56.929559+00:00",
+    "question": "standup meeting objective",
+    "active_sop": "SOP_TLDAYPLAN.pdf",
+    "detected_sop": "SOP_Standup_meeting.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-20T09:44:40.476798+00:00",
+    "question": "testing standards and best practices",
+    "active_sop": "SOP_Standup_meeting.pdf",
+    "detected_sop": "Testing_Standard_&_Best_Practices_V1.5.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T09:48:47.948172+00:00",
+    "question": "react coding standards",
+    "active_sop": "Testing_Standard_&_Best_Practices_V1.5.pdf",
+    "detected_sop": "Coding React Standards.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T09:49:35.610178+00:00",
+    "question": "responsibilities of technical lead",
+    "active_sop": "Coding React Standards.pdf",
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-20T09:50:07.337405+00:00",
+    "question": "responsibilities of technical lead",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-20T10:05:29.166453+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:05:29.178825+00:00",
+    "question": "what is the purpose of the planned software release",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:05:29.187218+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:05:29.193188+00:00",
+    "question": "list all responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:05:29.204936+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:05:29.207935+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:05:29.220893+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:05:29.223909+00:00",
+    "question": "what is the purpose of the planned software release",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:05:49.382750+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:05:49.390668+00:00",
+    "question": "what is the purpose of the planned software release",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:05:49.396007+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:05:49.402145+00:00",
+    "question": "list all responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:05:49.409260+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:05:49.413834+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:05:49.432943+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:05:49.448573+00:00",
+    "question": "what is the purpose of the planned software release",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:06:04.619460+00:00",
+    "question": "test lead responsibilities",
+    "active_sop": null,
+    "detected_sop": "TestLead_RR.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "brief",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:06:04.649004+00:00",
+    "question": "responsibilities",
+    "active_sop": "TestLead_RR.pdf",
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:06:04.782537+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:06:04.798361+00:00",
+    "question": "what is the purpose of the planned software release",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:06:04.818127+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:06:04.823131+00:00",
+    "question": "list all responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:06:04.828756+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:06:04.847232+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:06:04.882008+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:06:04.915105+00:00",
+    "question": "what is the purpose of the planned software release",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:06:28.499707+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:06:28.508694+00:00",
+    "question": "what is the purpose of the planned software release",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:06:28.514686+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:06:28.519338+00:00",
+    "question": "list all responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:06:28.523956+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:06:28.523956+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:06:28.523956+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:06:28.544195+00:00",
+    "question": "what is the purpose of the planned software release",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:08:26.367427+00:00",
+    "question": "react coding standards",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T10:10:13.811277+00:00",
+    "question": "best react coding standards",
+    "active_sop": null,
+    "detected_sop": "Coding React Standards.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T10:11:12.894861+00:00",
+    "question": "react coding standards",
+    "active_sop": "Coding React Standards.pdf",
+    "detected_sop": "Coding React Standards.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T10:12:20.948664+00:00",
+    "question": "who is prachi naik",
+    "active_sop": "Coding React Standards.pdf",
+    "detected_sop": "SOP_Root Cause Fixture.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T10:13:14.731471+00:00",
+    "question": "who is revati kumar",
+    "active_sop": "SOP_Root Cause Fixture.pdf",
+    "detected_sop": "GEL TECH SOP GEN NEWTECHINCOMPANY.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T10:14:58.165528+00:00",
+    "question": "testing standards and best practices",
+    "active_sop": "GEL TECH SOP GEN NEWTECHINCOMPANY.pdf",
+    "detected_sop": "Testing_Standard_&_Best_Practices_V1.5.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T10:16:53.236127+00:00",
+    "question": "tl day plan",
+    "active_sop": "Testing_Standard_&_Best_Practices_V1.5.pdf",
+    "detected_sop": "SOP_TLDAYPLAN.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T10:28:44.963554+00:00",
+    "question": "list responsibilities",
+    "active_sop": null,
+    "detected_sop": "Roles.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:28:44.970807+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:28:44.993121+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:28:45.002769+00:00",
+    "question": "what is the purpose of the planned software release",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:28:45.013259+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:28:45.020216+00:00",
+    "question": "list all responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:28:45.028243+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:28:45.036719+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:28:45.046291+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T10:28:45.054539+00:00",
+    "question": "what is the purpose of the planned software release",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:06:26.117474+00:00",
+    "question": "tl day plan",
+    "active_sop": null,
+    "detected_sop": "SOP_TLDAYPLAN.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T11:15:34.032308+00:00",
+    "question": "list responsibilities",
+    "active_sop": null,
+    "detected_sop": "Roles.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:15:34.041309+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:15:34.046830+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "ReviewMeeting.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:15:34.046830+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:15:34.070040+00:00",
+    "question": "what is the purpose of the planned software release",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:15:34.079038+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:15:34.082095+00:00",
+    "question": "list all responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:15:34.082095+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:15:34.096214+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:15:34.096214+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:15:34.115284+00:00",
+    "question": "what is the purpose of the planned software release",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:19:24.605847+00:00",
+    "question": "tl day plan",
+    "active_sop": null,
+    "detected_sop": "SOP_TLDAYPLAN.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T11:29:04.686850+00:00",
+    "question": "list responsibilities",
+    "active_sop": null,
+    "detected_sop": "Roles.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:29:04.695919+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:29:04.704958+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "ReviewMeeting.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:29:04.713230+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:29:04.725445+00:00",
+    "question": "what is the purpose of the planned software release",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:29:04.733445+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:29:04.742250+00:00",
+    "question": "list all responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:29:04.749679+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:29:04.758361+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:29:04.770058+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:29:04.780074+00:00",
+    "question": "what is the purpose of the planned software release",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:32:13.898434+00:00",
+    "question": "list responsibilities",
+    "active_sop": null,
+    "detected_sop": "Roles.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:32:13.906432+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:32:13.914335+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "ReviewMeeting.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:32:13.920989+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:32:13.931786+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:32:13.964029+00:00",
+    "question": "what is the purpose of the planned software release",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:32:13.970883+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:32:13.996609+00:00",
+    "question": "list all responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:32:14.003473+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:32:14.014019+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:32:14.047426+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:32:14.056765+00:00",
+    "question": "what is the purpose of the planned software release",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T11:36:22.302797+00:00",
+    "question": "tl day plan",
+    "active_sop": null,
+    "detected_sop": "SOP_TLDAYPLAN.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T11:38:13.155402+00:00",
+    "question": "tl day plan",
+    "active_sop": null,
+    "detected_sop": "SOP_TLDAYPLAN.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T11:40:26.700988+00:00",
+    "question": "what is server whitelisting",
+    "active_sop": "SOP_TLDAYPLAN.pdf",
+    "detected_sop": "SOP_ServerWhitelistingg.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T11:44:07.535012+00:00",
+    "question": "what is the responsibility of technical lead",
+    "active_sop": "SOP_ServerWhitelistingg.pdf",
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-20T11:44:17.586928+00:00",
+    "question": "what is the responsibility of technical lead",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-20T11:53:53.067336+00:00",
+    "question": "preferred time and duration of cto meet",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "SOP_CTO_Review.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T11:55:34.117135+00:00",
+    "question": "what all is needed in standup meeting",
+    "active_sop": "SOP_CTO_Review.pdf",
+    "detected_sop": "SOP_Standup_meeting.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T11:56:43.015852+00:00",
+    "question": "what is the preferred time for the standup meeting",
+    "active_sop": "SOP_Standup_meeting.pdf",
+    "detected_sop": "SOP_Standup_meeting.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T12:00:08.562518+00:00",
+    "question": "list responsibilities",
+    "active_sop": null,
+    "detected_sop": "Roles.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T12:00:08.574282+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T12:00:08.585299+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "ReviewMeeting.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T12:00:08.594300+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T12:00:08.606283+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T12:00:08.614313+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T12:00:08.629770+00:00",
+    "question": "list all responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T12:00:08.636781+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T12:00:08.646307+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T12:00:08.664952+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T12:00:08.679484+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T12:00:08.690052+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T12:00:35.468482+00:00",
+    "question": "list responsibilities",
+    "active_sop": null,
+    "detected_sop": "Roles.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T12:00:35.475959+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T12:00:35.501408+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "ReviewMeeting.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T12:00:35.501927+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T12:00:35.518324+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T12:00:35.525759+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T12:00:35.531053+00:00",
+    "question": "list all responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T12:00:35.549854+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T12:00:35.567367+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T12:00:35.572788+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T12:00:35.579795+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T12:00:35.585153+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-20T12:02:46.858952+00:00",
+    "question": "what is server whitelisting",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T12:04:47.334573+00:00",
+    "question": "preferred time and duration of cto meet",
+    "active_sop": null,
+    "detected_sop": "SOP_CTO_Review.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T12:07:52.815330+00:00",
+    "question": "what is server whitelisting",
+    "active_sop": "SOP_CTO_Review.pdf",
+    "detected_sop": "SOP_ServerWhitelistingg.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T12:08:41.456598+00:00",
+    "question": "what all is needed in standup meeting",
+    "active_sop": "SOP_ServerWhitelistingg.pdf",
+    "detected_sop": "SOP_Standup_meeting.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-20T12:09:38.609302+00:00",
+    "question": "responsibilities of technical lead",
+    "active_sop": "SOP_Standup_meeting.pdf",
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-20T12:09:48.335371+00:00",
+    "question": "responsibilities of technical lead",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-20T12:11:06.895457+00:00",
+    "question": "what will happen if the code is deployed into production without testing",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "SOP_APPLICATION DEPLOYMENT _ RELEASE.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T04:48:19.467743+00:00",
+    "question": "what is the responsibility of technical lead",
+    "active_sop": null,
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T04:48:24.688992+00:00",
+    "question": "what is the responsibility of technical lead",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T04:49:43.318918+00:00",
+    "question": "what is server whitelisting",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "SOP_ServerWhitelistingg.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T04:50:30.188403+00:00",
+    "question": "what is the purpose of whitelisting in server security",
+    "active_sop": "SOP_ServerWhitelistingg.pdf",
+    "detected_sop": "SOP_ServerWhitelistingg.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T04:51:23.737003+00:00",
+    "question": "what is server whitelisting",
+    "active_sop": "SOP_ServerWhitelistingg.pdf",
+    "detected_sop": "SOP_ServerWhitelistingg.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T04:52:01.085639+00:00",
+    "question": "responsibilities of technical lead",
+    "active_sop": "SOP_ServerWhitelistingg.pdf",
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T04:52:08.173850+00:00",
+    "question": "responsibilities of technical lead",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T04:52:57.113818+00:00",
+    "question": "what is server whitelisting",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "SOP_ServerWhitelistingg.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T04:55:08.035255+00:00",
+    "question": "what is the role of technical lead",
+    "active_sop": null,
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T04:56:17.178853+00:00",
+    "question": "what is the role of maintainanace engineer",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "6_RR_MaintainaceEng.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T04:57:12.950660+00:00",
+    "question": "what is the role of maintainanace engineer",
+    "active_sop": "6_RR_MaintainaceEng.pdf",
+    "detected_sop": "6_RR_MaintainaceEng.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T04:58:06.916016+00:00",
+    "question": "what is server whitelisting",
+    "active_sop": "6_RR_MaintainaceEng.pdf",
+    "detected_sop": "SOP_ServerWhitelistingg.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T04:59:04.224080+00:00",
+    "question": "what is server whitelisting",
+    "active_sop": "SOP_ServerWhitelistingg.pdf",
+    "detected_sop": "SOP_ServerWhitelistingg.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T05:06:57.567287+00:00",
+    "question": "list responsibilities",
+    "active_sop": null,
+    "detected_sop": "Roles.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:06:57.574488+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:06:57.582254+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "ReviewMeeting.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:06:57.583200+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:06:57.595018+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:06:57.604239+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:06:57.610496+00:00",
+    "question": "list all responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:06:57.616718+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:06:57.623334+00:00",
+    "question": "what is the ba role in creating tickets",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:06:57.629465+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:06:57.632415+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:06:57.641136+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:06:57.650611+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:07:31.142389+00:00",
+    "question": "list responsibilities",
+    "active_sop": null,
+    "detected_sop": "Roles.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:07:31.148860+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:07:31.159875+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "ReviewMeeting.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:07:31.174635+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:07:31.183459+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:07:31.191188+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:07:31.204313+00:00",
+    "question": "list all responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:07:31.212325+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:07:31.215453+00:00",
+    "question": "what is the ba role in creating tickets",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:07:31.226409+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:07:31.232364+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:07:31.267315+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:07:31.274491+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:07:37.378048+00:00",
+    "question": "test lead responsibilities",
+    "active_sop": null,
+    "detected_sop": "TestLead_RR.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "brief",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:07:37.393727+00:00",
+    "question": "responsibilities",
+    "active_sop": "TestLead_RR.pdf",
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:07:37.476191+00:00",
+    "question": "list responsibilities",
+    "active_sop": null,
+    "detected_sop": "Roles.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:07:37.490847+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:07:37.509491+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "ReviewMeeting.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:07:37.514030+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:07:37.529295+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:07:37.539791+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:07:37.556473+00:00",
+    "question": "list all responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:07:37.567089+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:07:37.581857+00:00",
+    "question": "what is the ba role in creating tickets",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:07:37.594140+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:07:37.608707+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:07:37.624768+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:07:37.658389+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:10:40.764506+00:00",
+    "question": "what is the role of technical lead",
+    "active_sop": null,
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T05:11:27.617767+00:00",
+    "question": "what is the role of maintainanace engineer",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T05:12:17.087008+00:00",
+    "question": "what is the role of maintainanace engineer",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T05:14:43.551082+00:00",
+    "question": "what is the role of maintenance engineer",
+    "active_sop": null,
+    "detected_sop": "6_RR_MaintainaceEng.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T05:15:46.503402+00:00",
+    "question": "what is server whitelisting",
+    "active_sop": "6_RR_MaintainaceEng.pdf",
+    "detected_sop": "SOP_ServerWhitelistingg.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T05:16:48.621616+00:00",
+    "question": "testing standards and best practices",
+    "active_sop": "SOP_ServerWhitelistingg.pdf",
+    "detected_sop": "Testing_Standard_&_Best_Practices_V1.5.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T05:18:47.009020+00:00",
+    "question": "documentation",
+    "active_sop": "Testing_Standard_&_Best_Practices_V1.5.pdf",
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T05:22:45.734929+00:00",
+    "question": "best practices",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:22:45.784141+00:00",
+    "question": "list responsibilities",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:22:45.801785+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:22:45.816011+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "ReviewMeeting.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:22:45.824238+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:22:45.835238+00:00",
+    "question": "participants",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:22:45.846610+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:22:45.856869+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:22:45.865146+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:22:45.882150+00:00",
+    "question": "list all responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:22:45.884160+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:22:45.902896+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:22:45.921526+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:22:45.932700+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:23:35.138068+00:00",
+    "question": "best practices",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:23:35.164711+00:00",
+    "question": "list responsibilities",
+    "active_sop": null,
+    "detected_sop": "Roles.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:23:35.172985+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:23:35.181143+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "ReviewMeeting.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:23:35.186336+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:23:35.203077+00:00",
+    "question": "participants",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:23:35.205677+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:23:35.220485+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:23:35.231708+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:23:35.241638+00:00",
+    "question": "list all responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:23:35.245741+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:23:35.262711+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:23:35.271769+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:23:35.287616+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:23:49.018436+00:00",
+    "question": "best practices",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:23:49.048809+00:00",
+    "question": "list responsibilities",
+    "active_sop": null,
+    "detected_sop": "Roles.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:23:49.061789+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:23:49.069611+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "ReviewMeeting.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:23:49.084806+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:23:49.093903+00:00",
+    "question": "participants",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:23:49.109606+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:23:49.119805+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:23:49.130991+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:23:49.140398+00:00",
+    "question": "list all responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:23:49.145146+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:23:49.161899+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:23:49.174297+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:23:49.185290+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:24:32.705309+00:00",
+    "question": "best practices",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:24:32.747308+00:00",
+    "question": "list responsibilities",
+    "active_sop": null,
+    "detected_sop": "Roles.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:24:32.755820+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:24:32.772900+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "ReviewMeeting.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:24:32.781153+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:24:32.797490+00:00",
+    "question": "participants",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:24:32.807724+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:24:32.832810+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:24:32.852814+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:24:32.866745+00:00",
+    "question": "list all responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:24:32.873276+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:24:32.879204+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:24:32.904162+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:24:32.914024+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T05:27:24.967801+00:00",
+    "question": "what is the role of maintenance engineer",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T05:28:13.917507+00:00",
+    "question": "documentation",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T05:30:13.795981+00:00",
+    "question": "what is the role of maintenance engineer",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T05:49:37.080283+00:00",
+    "question": "what is the role of maintenance engineer",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T05:55:58.998989+00:00",
+    "question": "what is server white listing",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T05:59:38.785032+00:00",
+    "question": "what is the role of maintainance engineer",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T06:05:53.260982+00:00",
+    "question": "list responsibilities",
+    "active_sop": null,
+    "detected_sop": "Roles.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:05:53.272397+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:05:53.277010+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "ReviewMeeting.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:05:53.283913+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:05:53.292234+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:05:53.306358+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:05:53.317387+00:00",
+    "question": "list all responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:05:53.324730+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:05:53.335948+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:05:53.341055+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:05:53.355355+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:05:53.366415+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:06:14.923127+00:00",
+    "question": "list responsibilities",
+    "active_sop": null,
+    "detected_sop": "Roles.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:06:14.939703+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:06:14.968569+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "ReviewMeeting.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:06:14.977662+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:06:14.991205+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:06:15.002665+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:06:15.013930+00:00",
+    "question": "list all responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:06:15.025107+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:06:15.037543+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:06:15.065628+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:06:15.075598+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:06:15.087039+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:08:44.924772+00:00",
+    "question": "what is the role of maintenance engineer",
+    "active_sop": null,
+    "detected_sop": "6_RR_MaintainaceEng.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T06:09:36.650196+00:00",
+    "question": "what is server whitelisting",
+    "active_sop": "6_RR_MaintainaceEng.pdf",
+    "detected_sop": "SOP_ServerWhitelistingg.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T06:10:23.785421+00:00",
+    "question": "testing standards and best practices",
+    "active_sop": "SOP_ServerWhitelistingg.pdf",
+    "detected_sop": "Testing_Standard_&_Best_Practices_V1.5.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T06:14:09.590812+00:00",
+    "question": "what is the responsibility of database engineer",
+    "active_sop": "Testing_Standard_&_Best_Practices_V1.5.pdf",
+    "detected_sop": "Final_v2_Role and Responsibility_Engineer_DB.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T06:15:08.364465+00:00",
+    "question": "what is his role practices practice testing best",
+    "active_sop": "Final_v2_Role and Responsibility_Engineer_DB.pdf",
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T06:16:19.311302+00:00",
+    "question": "what is the role of db engineer",
+    "active_sop": null,
+    "detected_sop": "Final_v2_Role and Responsibility_Engineer_DB.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T06:26:18.775939+00:00",
+    "question": "list responsibilities",
+    "active_sop": null,
+    "detected_sop": "Roles.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:26:18.786205+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:26:18.797389+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "ReviewMeeting.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:26:18.803114+00:00",
+    "question": "what is the escalation sla",
+    "active_sop": null,
+    "detected_sop": "ProductionIssue.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:26:18.818617+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:26:18.831559+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:26:18.845464+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:26:18.867682+00:00",
+    "question": "list all responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:26:18.891807+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:26:18.909919+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:26:18.915661+00:00",
+    "question": "what is the ba role in creating tickets",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:26:18.930388+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:26:18.940083+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:26:18.956172+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T06:30:30.782518+00:00",
+    "question": "what is the role of db engineer",
+    "active_sop": null,
+    "detected_sop": "Final_v2_Role and Responsibility_Engineer_DB.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T06:31:25.825750+00:00",
+    "question": "what is server whitelisting",
+    "active_sop": "Final_v2_Role and Responsibility_Engineer_DB.pdf",
+    "detected_sop": "SOP_ServerWhitelistingg.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T07:07:20.347005+00:00",
+    "question": "job objective of technical resource process and training manager",
+    "active_sop": "SOP_ServerWhitelistingg.pdf",
+    "detected_sop": "2.RR_TechnicalResourceManager_version1.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T07:11:28.645717+00:00",
+    "question": "what is the role and responsibility of maintenance engineer",
+    "active_sop": "2.RR_TechnicalResourceManager_version1.pdf",
+    "detected_sop": "6_RR_MaintainaceEng.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T07:11:42.775413+00:00",
+    "question": "what is the role and responsibilities of maintenance engineer",
+    "active_sop": "6_RR_MaintainaceEng.pdf",
+    "detected_sop": "6_RR_MaintainaceEng.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T07:21:53.403948+00:00",
+    "question": "responsibilities of technical lead",
+    "active_sop": "6_RR_MaintainaceEng.pdf",
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T07:22:35.159500+00:00",
+    "question": "more",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T08:58:33.512626+00:00",
+    "question": "list responsibilities",
+    "active_sop": null,
+    "detected_sop": "Roles.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T08:58:33.519652+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T08:58:33.531640+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "ReviewMeeting.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T08:58:33.531640+00:00",
+    "question": "what is the escalation sla",
+    "active_sop": null,
+    "detected_sop": "ProductionIssue.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T08:58:33.550243+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T08:58:33.558367+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T08:58:33.597350+00:00",
+    "question": "responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T08:58:33.601493+00:00",
+    "question": "responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T08:58:33.612975+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T08:58:33.643975+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T08:58:33.643975+00:00",
+    "question": "what is the ba role in creating tickets",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T08:58:33.665199+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T08:58:33.677567+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T08:58:33.710920+00:00",
+    "question": "what is responsibility 5",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T08:58:33.727253+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T08:58:33.736384+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:05:39.827422+00:00",
+    "question": "list all the responsibilities of technical lead",
+    "active_sop": null,
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T09:06:00.763117+00:00",
+    "question": "list all the responsibilities of technical lead",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "step-by-step",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T09:06:11.535883+00:00",
+    "question": "list all the responsibilities of technical lead",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T09:07:13.458870+00:00",
+    "question": "server whitelisting",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "SOP_ServerWhitelistingg.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T09:08:12.583192+00:00",
+    "question": "what is server whitelisting",
+    "active_sop": "SOP_ServerWhitelistingg.pdf",
+    "detected_sop": "SOP_ServerWhitelistingg.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T09:13:00.387903+00:00",
+    "question": "can i deploy code in production without testing",
+    "active_sop": "SOP_ServerWhitelistingg.pdf",
+    "detected_sop": "SOP_Production Issue.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T09:15:21.121617+00:00",
+    "question": "who is prachi naik",
+    "active_sop": "SOP_Production Issue.pdf",
+    "detected_sop": "SOP_Root Cause Fixture.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T09:17:46.114483+00:00",
+    "question": "give all points",
+    "active_sop": null,
+    "detected_sop": "LongSection.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:17:46.155828+00:00",
+    "question": "list responsibilities",
+    "active_sop": null,
+    "detected_sop": "Roles.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:17:46.165826+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:17:46.174613+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "ReviewMeeting.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:17:46.202179+00:00",
+    "question": "what is the escalation sla",
+    "active_sop": null,
+    "detected_sop": "ProductionIssue.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:17:46.212027+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:17:46.223989+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:17:46.236503+00:00",
+    "question": "responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:17:46.244504+00:00",
+    "question": "responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:17:46.253709+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:17:46.263785+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:17:46.275942+00:00",
+    "question": "what is the ba role in creating tickets",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:17:46.284942+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:17:46.289359+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:17:46.304293+00:00",
+    "question": "what is responsibility 5",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:17:46.317304+00:00",
+    "question": "what is point 25",
+    "active_sop": null,
+    "detected_sop": "LongSection.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:17:46.327306+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:17:46.340678+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:19:40.728121+00:00",
+    "question": "list all the responsibilities of technical lead",
+    "active_sop": null,
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T09:20:23.132389+00:00",
+    "question": "list all the server whitelisting",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "SOP_ServerWhitelistingg.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T09:24:21.360742+00:00",
+    "question": "what is server whitelisting",
+    "active_sop": "SOP_ServerWhitelistingg.pdf",
+    "detected_sop": "SOP_ServerWhitelistingg.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T09:24:43.868227+00:00",
+    "question": "list all the responsibilities of technical lead",
+    "active_sop": "SOP_ServerWhitelistingg.pdf",
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T09:26:50.944884+00:00",
+    "question": "give all points",
+    "active_sop": null,
+    "detected_sop": "LongSection.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:26:50.960877+00:00",
+    "question": "list responsibilities",
+    "active_sop": null,
+    "detected_sop": "Roles.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:26:50.969437+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:26:50.977534+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "ReviewMeeting.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:26:50.985323+00:00",
+    "question": "what is the escalation sla",
+    "active_sop": null,
+    "detected_sop": "ProductionIssue.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:26:50.993169+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:26:50.994640+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:26:51.010900+00:00",
+    "question": "responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:26:51.017740+00:00",
+    "question": "responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:26:51.042142+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:26:51.051424+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:26:51.059425+00:00",
+    "question": "what is the ba role in creating tickets",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:26:51.066826+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:26:51.072876+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:26:51.094669+00:00",
+    "question": "what is responsibility 5",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:26:51.111947+00:00",
+    "question": "what is point 25",
+    "active_sop": null,
+    "detected_sop": "LongSection.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:26:51.111947+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:26:51.130479+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:28:54.872578+00:00",
+    "question": "what are the responsibilities of technical lead",
+    "active_sop": null,
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T09:29:02.170584+00:00",
+    "question": "what are the responsibilities of technical lead",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T09:30:01.814231+00:00",
+    "question": "more",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T09:32:06.683007+00:00",
+    "question": "what are the responsibilities of technical lead",
+    "active_sop": null,
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T09:32:11.102506+00:00",
+    "question": "what are the responsibilities of technical lead",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T09:33:03.226532+00:00",
+    "question": "more",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T09:40:32.963476+00:00",
+    "question": "give all points",
+    "active_sop": null,
+    "detected_sop": "LongSection.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:40:32.975022+00:00",
+    "question": "what are the responsibilities of technical lead",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:40:32.984044+00:00",
+    "question": "list responsibilities",
+    "active_sop": null,
+    "detected_sop": "Roles.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:40:33.000316+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:40:33.007548+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "ReviewMeeting.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:40:33.015160+00:00",
+    "question": "what is the escalation sla",
+    "active_sop": null,
+    "detected_sop": "ProductionIssue.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:40:33.033853+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:40:33.042855+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:40:33.066411+00:00",
+    "question": "responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:40:33.067043+00:00",
+    "question": "responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:40:33.082893+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:40:33.091851+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:40:33.118260+00:00",
+    "question": "what is the ba role in creating tickets",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:40:33.126236+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:40:33.133314+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:40:33.149809+00:00",
+    "question": "what is responsibility 5",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:40:33.160943+00:00",
+    "question": "what is point 25",
+    "active_sop": null,
+    "detected_sop": "LongSection.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:40:33.200337+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:40:33.236606+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T09:48:05.762726+00:00",
+    "question": "give all responsibilities of technical lead",
+    "active_sop": null,
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T09:48:10.642802+00:00",
+    "question": "give all responsibilities of technical lead",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T09:48:20.342341+00:00",
+    "question": "give all responsibilities of technical lead",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T10:03:34.897708+00:00",
+    "question": "give all points",
+    "active_sop": null,
+    "detected_sop": "LongSection.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:34.911757+00:00",
+    "question": "give all responsibilities of technical lead",
+    "active_sop": null,
+    "detected_sop": "TechnicalLead.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:34.923777+00:00",
+    "question": "what are the responsibilities of technical lead",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:34.961935+00:00",
+    "question": "list responsibilities",
+    "active_sop": null,
+    "detected_sop": "Roles.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:34.970964+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:34.978446+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "ReviewMeeting.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:34.978446+00:00",
+    "question": "what is the escalation sla",
+    "active_sop": null,
+    "detected_sop": "ProductionIssue.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:35.010211+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:35.020319+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:35.028172+00:00",
+    "question": "responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:35.028172+00:00",
+    "question": "responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:35.047041+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:35.056156+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:35.078332+00:00",
+    "question": "what is the ba role in creating tickets",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:35.088872+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:35.108814+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:35.121549+00:00",
+    "question": "what is responsibility 5",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:35.132423+00:00",
+    "question": "what is point 25",
+    "active_sop": null,
+    "detected_sop": "LongSection.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:35.142316+00:00",
+    "question": "what is responsibility 35",
+    "active_sop": null,
+    "detected_sop": "TechnicalLead.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:35.153332+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:35.163741+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:52.975877+00:00",
+    "question": "give all points",
+    "active_sop": null,
+    "detected_sop": "LongSection.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:52.995398+00:00",
+    "question": "give all responsibilities of technical lead",
+    "active_sop": null,
+    "detected_sop": "TechnicalLead.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:53.008366+00:00",
+    "question": "what are the responsibilities of technical lead",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:53.024958+00:00",
+    "question": "list responsibilities",
+    "active_sop": null,
+    "detected_sop": "Roles.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:53.033711+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:53.066380+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "ReviewMeeting.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:53.075721+00:00",
+    "question": "what is the escalation sla",
+    "active_sop": null,
+    "detected_sop": "ProductionIssue.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:53.097985+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:53.109541+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:53.119132+00:00",
+    "question": "responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:53.127655+00:00",
+    "question": "responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:53.135945+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:53.145891+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:53.156018+00:00",
+    "question": "what is the ba role in creating tickets",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:53.175285+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:53.182328+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:53.192687+00:00",
+    "question": "what is responsibility 5",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:53.222556+00:00",
+    "question": "what is point 25",
+    "active_sop": null,
+    "detected_sop": "LongSection.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:53.234402+00:00",
+    "question": "what is responsibility 35",
+    "active_sop": null,
+    "detected_sop": "TechnicalLead.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:53.246999+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:03:53.257032+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-21T10:07:17.700527+00:00",
+    "question": "list all the technical responsibilities of technical lead",
+    "active_sop": null,
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T10:08:05.895278+00:00",
+    "question": "responsibilities of maintenance lead",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "5_RR_Maintainacelead.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T10:08:32.773373+00:00",
+    "question": "list all responsibilities of maintenance lead",
+    "active_sop": "5_RR_Maintainacelead.pdf",
+    "detected_sop": "5_RR_Maintainacelead.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T10:12:32.716403+00:00",
+    "question": "what is server whitelisting",
+    "active_sop": "5_RR_Maintainacelead.pdf",
+    "detected_sop": "SOP_ServerWhitelistingg.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
   }
 ]

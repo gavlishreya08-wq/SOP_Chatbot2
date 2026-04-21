@@ -362,7 +362,10 @@ def split_docs(docs: list[Document]) -> list[Document]:
 
         for section_index, section in enumerate(outline, start=1):
             page_range = _page_range(section["pages"])
-            section_pieces = splitter.split_text(section["content"])
+            if normalize_text(section["title"]).lower().startswith("extracted table"):
+                section_pieces = [section["content"]]
+            else:
+                section_pieces = splitter.split_text(section["content"])
             if not section_pieces:
                 continue
 
