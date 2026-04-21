@@ -271,10 +271,23 @@ a {
 .question-chip {
   justify-content: flex-start !important;
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
   padding: 12px 14px !important;
+  height: auto !important;
+  align-items: flex-start !important;
+  overflow: hidden;
   text-align: left;
   white-space: normal;
   line-height: 1.5;
+}
+
+.question-chip :where(span) {
+  min-width: 0;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .compare-result-panel {

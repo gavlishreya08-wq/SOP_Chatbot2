@@ -48,6 +48,7 @@ function formatContent(text: string): string {
   const output: string[] = [];
   let inUnorderedList = false;
   let inOrderedList = false;
+  let expectedOrderedValue: number | null = null;
 
   for (const line of lines) {
     const trimmed = line.trim();
@@ -60,6 +61,7 @@ function formatContent(text: string): string {
       if (inOrderedList) {
         output.push("</ol>");
         inOrderedList = false;
+        expectedOrderedValue = null;
       }
       continue;
     }
@@ -69,6 +71,7 @@ function formatContent(text: string): string {
       if (inOrderedList) {
         output.push("</ol>");
         inOrderedList = false;
+        expectedOrderedValue = null;
       }
       if (!inUnorderedList) {
         output.push('<ul class="checklist">');
@@ -88,6 +91,7 @@ function formatContent(text: string): string {
       if (inOrderedList) {
         output.push("</ol>");
         inOrderedList = false;
+        expectedOrderedValue = null;
       }
       if (!inUnorderedList) {
         output.push("<ul>");
@@ -98,15 +102,24 @@ function formatContent(text: string): string {
     }
 
     if (numberMatch) {
+      const explicitNumber = Number(trimmed.match(/^(\d+)[.)]/)?.[1] || "1");
       if (inUnorderedList) {
         output.push("</ul>");
         inUnorderedList = false;
       }
-      if (!inOrderedList) {
-        output.push("<ol>");
+      if (
+        !inOrderedList ||
+        expectedOrderedValue === null ||
+        explicitNumber !== expectedOrderedValue
+      ) {
+        if (inOrderedList) {
+          output.push("</ol>");
+        }
+        output.push(`<ol start="${explicitNumber}">`);
         inOrderedList = true;
       }
-      output.push(`<li>${numberMatch[1]}</li>`);
+      output.push(`<li value="${explicitNumber}">${numberMatch[1]}</li>`);
+      expectedOrderedValue = explicitNumber + 1;
       continue;
     }
 
@@ -117,6 +130,7 @@ function formatContent(text: string): string {
     if (inOrderedList) {
       output.push("</ol>");
       inOrderedList = false;
+      expectedOrderedValue = null;
     }
     output.push(`<p>${trimmed}</p>`);
   }

@@ -1,13 +1,13 @@
 ﻿{
-    "sessionId":  "20260421-153622",
-    "startedAt":  "2026-04-21T15:36:25.0070249+05:30",
+    "sessionId":  "20260421-170237",
+    "startedAt":  "2026-04-21T17:02:39.8930798+05:30",
     "managerLog":  "C:\\Users\\Shreya gavli\\Desktop\\sop_chatbot_ auto - Copy\\.run\\manager.log",
     "processes":  {
                       "backend":  {
-                                      "pid":  11256,
+                                      "pid":  30348,
                                       "cwd":  "C:\\Users\\Shreya gavli\\Desktop\\sop_chatbot_ auto - Copy",
-                                      "stdoutLog":  "C:\\Users\\Shreya gavli\\Desktop\\sop_chatbot_ auto - Copy\\.run\\backend\\20260421-153622.out.log",
-                                      "stderrLog":  "C:\\Users\\Shreya gavli\\Desktop\\sop_chatbot_ auto - Copy\\.run\\backend\\20260421-153622.err.log",
+                                      "stdoutLog":  "C:\\Users\\Shreya gavli\\Desktop\\sop_chatbot_ auto - Copy\\.run\\backend\\20260421-170237.out.log",
+                                      "stderrLog":  "C:\\Users\\Shreya gavli\\Desktop\\sop_chatbot_ auto - Copy\\.run\\backend\\20260421-170237.err.log",
                                       "command":  [
                                                       "C:\\Users\\Shreya gavli\\Desktop\\sop_chatbot_ auto - Copy\\venv\\Scripts\\python.exe",
                                                       "-m",
@@ -21,10 +21,10 @@
                                                   ]
                                   },
                       "frontend":  {
-                                       "pid":  30264,
+                                       "pid":  10300,
                                        "cwd":  "C:\\Users\\Shreya gavli\\Desktop\\sop_chatbot_ auto - Copy\\frontend",
-                                       "stdoutLog":  "C:\\Users\\Shreya gavli\\Desktop\\sop_chatbot_ auto - Copy\\.run\\frontend\\20260421-153622.out.log",
-                                       "stderrLog":  "C:\\Users\\Shreya gavli\\Desktop\\sop_chatbot_ auto - Copy\\.run\\frontend\\20260421-153622.err.log",
+                                       "stdoutLog":  "C:\\Users\\Shreya gavli\\Desktop\\sop_chatbot_ auto - Copy\\.run\\frontend\\20260421-170237.out.log",
+                                       "stderrLog":  "C:\\Users\\Shreya gavli\\Desktop\\sop_chatbot_ auto - Copy\\.run\\frontend\\20260421-170237.err.log",
                                        "command":  [
                                                        "C:\\Program Files\\nodejs\\npm.cmd",
                                                        "run",

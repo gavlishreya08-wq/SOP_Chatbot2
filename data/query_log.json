@@ -7128,5 +7128,285 @@
     "was_clarification": false,
     "answer_mode": "detailed",
     "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T10:26:32.776866+00:00",
+    "question": "who is prachi naik",
+    "active_sop": "SOP_ServerWhitelistingg.pdf",
+    "detected_sop": "SOP_Root Cause Fixture.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T10:27:39.742444+00:00",
+    "question": "can i deploy code in production without testing",
+    "active_sop": "SOP_Root Cause Fixture.pdf",
+    "detected_sop": "SOP_Production Issue.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T10:28:44.885096+00:00",
+    "question": "who reviews the code and database changes for minor changes",
+    "active_sop": "SOP_Production Issue.pdf",
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T10:51:16.538795+00:00",
+    "question": "who raises a production issue fixture ticket for frontend backend issues",
+    "active_sop": null,
+    "detected_sop": "SOP_Production Issue.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T10:52:23.309241+00:00",
+    "question": "who closes the production issue ticket after confirmation from the client",
+    "active_sop": "SOP_Production Issue.pdf",
+    "detected_sop": "SOP_Production Issue.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T11:08:51.991240+00:00",
+    "question": "list all responsibilities of technical lead",
+    "active_sop": null,
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T11:16:48.371576+00:00",
+    "question": "responsibilities of maintenance lead",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "5_RR_Maintainacelead.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T11:17:28.047855+00:00",
+    "question": "list all responsibilities of maintenance lead",
+    "active_sop": "5_RR_Maintainacelead.pdf",
+    "detected_sop": "5_RR_Maintainacelead.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T11:19:00.184743+00:00",
+    "question": "job objective",
+    "active_sop": "5_RR_Maintainacelead.pdf",
+    "detected_sop": "5_RR_Maintainacelead.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T11:21:00.032439+00:00",
+    "question": "training requirement",
+    "active_sop": "5_RR_Maintainacelead.pdf",
+    "detected_sop": "4_RR_DevelopmentEng_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T11:21:35.046520+00:00",
+    "question": "job objective of technical lead",
+    "active_sop": "4_RR_DevelopmentEng_version2.pdf",
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T11:23:14.034033+00:00",
+    "question": "tl day plan",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "SOP_TLDAYPLAN.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T11:26:30.583506+00:00",
+    "question": "can i deploy code into production without testing",
+    "active_sop": "SOP_TLDAYPLAN.pdf",
+    "detected_sop": "SOP_Production Issue.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T11:33:13.681038+00:00",
+    "question": "list all the responsibilities of technical lead",
+    "active_sop": null,
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T11:34:10.465738+00:00",
+    "question": "what is server whitelisting",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "SOP_ServerWhitelistingg.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T11:35:24.754211+00:00",
+    "question": "what is the purpose of whitelisting in server security",
+    "active_sop": "SOP_ServerWhitelistingg.pdf",
+    "detected_sop": "SOP_ServerWhitelistingg.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T11:36:54.439088+00:00",
+    "question": "how to write sp",
+    "active_sop": "SOP_ServerWhitelistingg.pdf",
+    "detected_sop": "Final_3_Database Coding_Development Standards & Best Practice.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T11:37:55.216696+00:00",
+    "question": "what are the standard syntax keywords and operators to be used in stored procedure",
+    "active_sop": "Final_3_Database Coding_Development Standards & Best Practice.pdf",
+    "detected_sop": "Final_3_Database Coding_Development Standards & Best Practice.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T11:44:14.234396+00:00",
+    "question": "list all react coding standards",
+    "active_sop": "Final_3_Database Coding_Development Standards & Best Practice.pdf",
+    "detected_sop": "Coding React Standards.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T11:45:29.962420+00:00",
+    "question": "what is the timing for cto review meet",
+    "active_sop": "Coding React Standards.pdf",
+    "detected_sop": "SOP_CTO_Review.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T11:45:57.757231+00:00",
+    "question": "frequency",
+    "active_sop": "SOP_CTO_Review.pdf",
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T11:46:58.349644+00:00",
+    "question": "frequency of the cto review meet",
+    "active_sop": "SOP_CTO_Review.pdf",
+    "detected_sop": "SOP_CTO_Review.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T11:48:25.566420+00:00",
+    "question": "what is smoke testing",
+    "active_sop": "SOP_CTO_Review.pdf",
+    "detected_sop": "RR_TestEngineer_V1.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T11:50:15.139408+00:00",
+    "question": "who is the test lead",
+    "active_sop": "RR_TestEngineer_V1.pdf",
+    "detected_sop": "RR_TestLead_V1.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T11:53:28.416714+00:00",
+    "question": "list all responsibilities of lead database",
+    "active_sop": "RR_TestLead_V1.pdf",
+    "detected_sop": "Final_v2_Roles and Responsibilities_Lead_DB.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T11:54:02.712019+00:00",
+    "question": "list all responsibilities of lead database",
+    "active_sop": "Final_v2_Roles and Responsibilities_Lead_DB.pdf",
+    "detected_sop": "Final_v2_Roles and Responsibilities_Lead_DB.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-21T11:54:45.318171+00:00",
+    "question": "list all",
+    "active_sop": "Final_v2_Roles and Responsibilities_Lead_DB.pdf",
+    "detected_sop": "Final_v2_Roles and Responsibilities_Lead_DB.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-21T11:55:21.887264+00:00",
+    "question": "list all responsibilities of lead database",
+    "active_sop": "Final_v2_Roles and Responsibilities_Lead_DB.pdf",
+    "detected_sop": "Final_v2_Roles and Responsibilities_Lead_DB.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
   }
 ]
