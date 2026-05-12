@@ -26,8 +26,6 @@ logger = logging.getLogger(__name__)
 UNAVAILABLE_RESPONSE = "This information is not available in the provided SOP."
 SHOW_MORE_PAGE_SIZE = 15
 SHOW_MORE_MARKER = "[SHOW_MORE_AVAILABLE]"
-DEFAULT_CONTEXT_CHAR_BUDGET = 9000
-COMPLETE_CONTEXT_CHAR_BUDGET = 15000
 
 
 @dataclass
@@ -1071,69 +1069,10 @@ class RAGChain:
             return page
         return None
 
-    def _context_char_budget(self, question: str) -> int:
-        if self._wants_complete_section_answer(question):
-            return COMPLETE_CONTEXT_CHAR_BUDGET
-        return DEFAULT_CONTEXT_CHAR_BUDGET
-
-    def _context_doc_priority(self, doc: Document) -> tuple[int, int, int, str]:
-        content_type = str(doc.metadata.get("content_type", ""))
-        section_title = normalize_query(str(doc.metadata.get("section_title", "")))
-        if content_type == "section":
-            base = 0
-        elif content_type == "focus":
-            base = 1
-        elif content_type == "profile":
-            base = 2
-        else:
-            base = 3
-
-        section_rank = 0
-        if section_title in {"procedure", "process", "workflow", "responsibilities", "guidelines", "checklist"}:
-            section_rank = -1
-
-        body_length = -len(self._context_body(doc))
-        source = str(doc.metadata.get("source", ""))
-        return (base, section_rank, body_length, source)
-
-    def _prepare_docs_for_llm_context(self, docs: list[Document], question: str) -> list[Document]:
-        ordered = sorted(docs, key=self._context_doc_priority)
-        if not self._wants_complete_section_answer(question):
-            return ordered
-
-        section_docs = [doc for doc in ordered if doc.metadata.get("content_type") == "section"]
-        if section_docs:
-            focus_docs = [doc for doc in ordered if doc.metadata.get("content_type") == "focus"][:1]
-            return [*section_docs, *focus_docs]
-        return ordered
-
-    def _format_context(
-        self,
-        docs: list[Document],
-        *,
-        strip_numbering: bool = True,
-        max_chars: int | None = None,
-    ) -> str:
+    def _format_context(self, docs: list[Document], *, strip_numbering: bool = True) -> str:
         formatted: list[str] = []
         grouped: dict[tuple[str, object, str], dict[str, object]] = {}
         ungrouped: list[Document] = []
-        used_chars = 0
-
-        def append_block(block: str) -> bool:
-            nonlocal used_chars
-            if not block.strip():
-                return False
-            projected = used_chars + len(block) + (2 if formatted else 0)
-            if max_chars is not None and formatted and projected > max_chars:
-                return False
-            if max_chars is not None and not formatted and len(block) > max_chars:
-                formatted.append(block[:max_chars].rstrip())
-                used_chars = len(formatted[0])
-                return False
-            formatted.append(block)
-            used_chars = projected
-            return True
-
         for doc in docs:
             if doc.metadata.get("content_type") == "section":
                 key = (
@@ -1162,8 +1101,7 @@ class RAGChain:
             if pages:
                 header += f" | Page: {', '.join(pages)}"
             header += "]"
-            if not append_block(f"{header}\n" + "\n".join(group["lines"]).strip()):
-                break
+            formatted.append(f"{header}\n" + "\n".join(group["lines"]).strip())
         for doc in ungrouped:
             header = f"[Source: {doc.metadata.get('source', 'SOP')}"
             page_label = self._page_label(doc)
@@ -1174,8 +1112,7 @@ class RAGChain:
                 self._strip_context_numbering(line) if strip_numbering else line
                 for line in self._context_body(doc).splitlines()
             )
-            if not append_block(f"{header}\n{body}"):
-                break
+            formatted.append(f"{header}\n{body}")
         return "\n\n".join(formatted)
 
     def _context_sections(self, context: str) -> list[tuple[str, list[str]]]:
@@ -1854,11 +1791,7 @@ class RAGChain:
                 image = doc.metadata["path"]
                 break
 
-        llm_context_docs = self._prepare_docs_for_llm_context(docs, message)
-        context = self._format_context(
-            llm_context_docs,
-            max_chars=self._context_char_budget(message),
-        )
+        context = self._format_context(docs)
         extractive_context = self._format_context(docs, strip_numbering=False)
         history_text = self._format_history(history)
 
@@ -2122,11 +2055,7 @@ class RAGChain:
                 image = doc.metadata["path"]
                 break
 
-        llm_context_docs = self._prepare_docs_for_llm_context(docs, message)
-        context = self._format_context(
-            llm_context_docs,
-            max_chars=self._context_char_budget(message),
-        )
+        context = self._format_context(docs)
         extractive_context = self._format_context(docs, strip_numbering=False)
         history_text = self._format_history(history)
 

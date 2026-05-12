@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from collections import defaultdict
-import re
 
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -54,85 +53,6 @@ FOCUS_SECTION_ORDER = {
         "Responsibilities",
     ),
 }
-
-STRUCTURED_LINE_RE = re.compile(r"^\s*(?:[-*]\s+|\d+(?:\.\d+)*[\).]\s+|[a-zA-Z][\).]\s+)")
-MIN_SECTION_CHUNK_CHARS = 280
-
-
-def _has_structured_content(content: str) -> bool:
-    lines = [line.strip() for line in content.splitlines() if line.strip()]
-    structured_lines = sum(1 for line in lines if STRUCTURED_LINE_RE.match(line))
-    return structured_lines >= 3
-
-
-def _merge_small_pieces(pieces: list[str], *, minimum_size: int = MIN_SECTION_CHUNK_CHARS) -> list[str]:
-    if not pieces:
-        return []
-
-    merged: list[str] = []
-    for piece in pieces:
-        cleaned = piece.strip()
-        if not cleaned:
-            continue
-        if merged and len(cleaned) < minimum_size:
-            merged[-1] = f"{merged[-1].rstrip()}\n{cleaned}".strip()
-            continue
-        merged.append(cleaned)
-
-    if len(merged) >= 2 and len(merged[-1]) < minimum_size:
-        merged[-2] = f"{merged[-2].rstrip()}\n{merged[-1]}".strip()
-        merged.pop()
-
-    return merged
-
-
-def _split_structured_section(
-    content: str,
-    *,
-    max_chars: int,
-) -> list[str]:
-    lines = [line.rstrip() for line in content.splitlines() if line.strip()]
-    if not lines:
-        return []
-
-    chunks: list[str] = []
-    current_lines: list[str] = []
-    current_len = 0
-
-    for line in lines:
-        line_len = len(line) + 1
-        starts_new_item = bool(STRUCTURED_LINE_RE.match(line))
-        if (
-            current_lines
-            and starts_new_item
-            and current_len >= MIN_SECTION_CHUNK_CHARS
-            and (current_len + line_len) > max_chars
-        ):
-            chunks.append("\n".join(current_lines).strip())
-            current_lines = []
-            current_len = 0
-
-        current_lines.append(line)
-        current_len += line_len
-
-    if current_lines:
-        chunks.append("\n".join(current_lines).strip())
-
-    return _merge_small_pieces(chunks)
-
-
-def _split_section_content(
-    splitter: RecursiveCharacterTextSplitter,
-    content: str,
-) -> list[str]:
-    if _has_structured_content(content):
-        structured_pieces = _split_structured_section(
-            content,
-            max_chars=splitter._chunk_size,  # type: ignore[attr-defined]
-        )
-        if structured_pieces:
-            return structured_pieces
-    return _merge_small_pieces(splitter.split_text(content))
 
 
 def _page_sort_key(doc: Document) -> tuple[int, str]:
@@ -445,7 +365,7 @@ def split_docs(docs: list[Document]) -> list[Document]:
             if normalize_text(section["title"]).lower().startswith("extracted table"):
                 section_pieces = [section["content"]]
             else:
-                section_pieces = _split_section_content(splitter, section["content"])
+                section_pieces = splitter.split_text(section["content"])
             if not section_pieces:
                 continue
 
@@ -457,7 +377,6 @@ def split_docs(docs: list[Document]) -> list[Document]:
                         "section_title": section["title"],
                         "section_index": section_index,
                         "chunk_in_section": piece_index,
-                        "section_chunk_count": len(section_pieces),
                         "page_label": page_range,
                         "page_range": page_range,
                         "chunk_id": f"{source}::s{section_index}::c{piece_index}",

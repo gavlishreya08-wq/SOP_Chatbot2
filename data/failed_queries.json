@@ -397,33 +397,5 @@
     "answer": "Low confidence: Test automation objective is to streamline testing.",
     "confidence": "low",
     "active_sop": null
-  },
-  {
-    "timestamp": "2026-04-25T09:14:34.616284+00:00",
-    "question": "explain the automation objective",
-    "answer": "Low confidence: Test automation objective is to streamline testing.",
-    "confidence": "low",
-    "active_sop": null
-  },
-  {
-    "timestamp": "2026-04-25T09:14:47.359503+00:00",
-    "question": "explain the automation objective",
-    "answer": "Low confidence: Test automation objective is to streamline testing.",
-    "confidence": "low",
-    "active_sop": null
-  },
-  {
-    "timestamp": "2026-04-25T11:03:38.208096+00:00",
-    "question": "who is the chief technical office",
-    "answer": "",
-    "confidence": "low",
-    "active_sop": "4_RR_DevelopmentEng_version2.pdf"
-  },
-  {
-    "timestamp": "2026-04-30T11:44:59.757003+00:00",
-    "question": "you are the bot for which company",
-    "answer": "",
-    "confidence": "low",
-    "active_sop": "Coding React Standards.pdf"
   }
 ]

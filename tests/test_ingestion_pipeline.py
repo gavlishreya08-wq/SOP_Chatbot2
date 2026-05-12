@@ -107,38 +107,6 @@ class IngestionPipelineTests(unittest.TestCase):
         combined_text = "\n".join(chunk.page_content for chunk in responsibility_chunks)
         self.assertIn("3. Review progress weekly.", combined_text)
 
-    def test_split_docs_keeps_numbered_procedure_steps_grouped_without_tiny_tail_chunks(self):
-        procedure_lines = "\n".join(
-            f"{index}. Perform repository setup step {index} with detailed instruction text."
-            for index in range(1, 31)
-        )
-        docs = [
-            make_doc(
-                f"GITLAB SOP\nPROCEDURE\n{procedure_lines}",
-                "GitLabSetup.pdf",
-                page=0,
-                page_label="1",
-                source_title="GITLAB SOP",
-                source_kind="workflow",
-                source_aliases="Source Code Management GitLab",
-                source_intents="GitLab setup workflow",
-                source_section_titles="Procedure",
-                source_summary="Procedure: Repository setup in GitLab.",
-            )
-        ]
-
-        chunks = split_docs(docs)
-        section_chunks = [
-            chunk
-            for chunk in chunks
-            if chunk.metadata["content_type"] == "section"
-            and chunk.metadata["section_title"] == "Procedure"
-        ]
-
-        self.assertGreaterEqual(len(section_chunks), 2)
-        self.assertTrue(all("SECTION: Procedure" in chunk.page_content for chunk in section_chunks))
-        self.assertTrue(all(len(chunk.page_content.strip()) > 250 for chunk in section_chunks))
-
 
 if __name__ == "__main__":
     unittest.main()
