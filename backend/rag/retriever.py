@@ -128,6 +128,28 @@ VISUAL_KEYWORDS = {
     "workflow",
 }
 
+PROCEDURE_SECTION_TITLES = {
+    "agenda",
+    "checklist",
+    "guidelines",
+    "overview",
+    "procedure",
+    "process",
+    "responsibilities",
+    "steps",
+    "workflow",
+}
+
+QUERY_PHRASE_REWRITES = {
+    "source code management": "source code management gitlab code repository source control",
+    "manage source code": "source code management gitlab code repository",
+    "code management": "source code management code repository",
+    "code repository": "code repository gitlab source control",
+    "source control": "source code management gitlab repository",
+    "git repository": "gitlab code repository",
+    "repo setup": "repository setup gitlab",
+}
+
 
 def normalize_text(text: str) -> str:
     if not text:
@@ -156,6 +178,8 @@ def tokenize(text: str) -> set[str]:
 
 def normalize_query(text: str) -> str:
     normalized = normalize_text(text)
+    for phrase, replacement in QUERY_PHRASE_REWRITES.items():
+        normalized = re.sub(rf"\b{re.escape(phrase)}\b", replacement, normalized)
     replacements = {
         "responsibilites": "responsibilities",
         "responsibilty": "responsibility",
@@ -164,6 +188,9 @@ def normalize_query(text: str) -> str:
         "authorty": "authority",
         "work flow": "workflow",
         "jra": "jira",
+        "git": "gitlab",
+        "repos": "repository",
+        "repo": "repository",
         "sop": "sop",
     }
     words = []
@@ -495,6 +522,13 @@ def _page_text(doc: Document) -> str:
     return normalize_text(doc.page_content[:1600])
 
 
+def _context_body(doc: Document) -> str:
+    content = doc.page_content or ""
+    if "CONTENT:" in content:
+        return content.split("CONTENT:", 1)[1].strip()
+    return content.strip()
+
+
 def _document_query_terms(doc: Document) -> set[str]:
     return (
         tokenize(doc.page_content)
@@ -503,6 +537,30 @@ def _document_query_terms(doc: Document) -> set[str]:
         | tokenize(str(doc.metadata.get("source_aliases", "")))
         | tokenize(str(doc.metadata.get("section_title", "")))
     )
+
+
+def _structured_line_count(doc: Document) -> int:
+    return sum(
+        1
+        for line in _context_body(doc).splitlines()
+        if re.match(r"^\s*(?:[-*]\s+|\d+(?:\.\d+)*[\).]\s+|[a-zA-Z][\).]\s+)", line)
+    )
+
+
+def _content_length_score(doc: Document) -> float:
+    content = _context_body(doc)
+    if not content:
+        return -0.1
+    length = len(content)
+    if length < 120:
+        return -0.2
+    if length < 260:
+        return -0.08
+    if length > 1200:
+        return 0.14
+    if length > 700:
+        return 0.1
+    return 0.04
 
 
 def _required_primary_matches(primary_terms: list[str]) -> int:
@@ -563,6 +621,8 @@ def _score_document(
 ) -> float:
     source = doc.metadata.get("source", "")
     source_title = doc.metadata.get("source_title", source)
+    normalized_query = normalize_text(query)
+    wants_complete = _wants_complete_structured_answer(query)
     semantic_score = 1.0 / (1.0 + max(distance, 0.0))
     content_score = keyword_overlap_score(
         query_terms,
@@ -575,7 +635,6 @@ def _score_document(
     )
 
     exact_phrase_bonus = 0.0
-    normalized_query = normalize_text(query)
     if normalized_query and normalized_query in _page_text(doc):
         exact_phrase_bonus = 0.15
 
@@ -618,6 +677,31 @@ def _score_document(
     if doc.metadata.get("type") == "image" and not is_visual_query(query):
         image_penalty = -0.25
 
+    richness_score = _content_length_score(doc)
+    structured_bonus = 0.0
+    structured_line_count = _structured_line_count(doc)
+    if structured_line_count >= 3:
+        structured_bonus += min(0.2, structured_line_count * 0.02)
+
+    generic_chunk_penalty = 0.0
+    if wants_complete:
+        if content_type == "profile":
+            generic_chunk_penalty -= 0.5
+        elif content_type == "focus":
+            generic_chunk_penalty -= 0.18
+        if content_type == "section":
+            richness_score += 0.08
+        elif content_type:
+            richness_score -= 0.06
+        if section_title in PROCEDURE_SECTION_TITLES:
+            structured_bonus += 0.12
+        if structured_line_count == 0 and content_type != "section":
+            generic_chunk_penalty -= 0.08
+    elif content_type == "profile":
+        generic_chunk_penalty -= 0.22
+    elif content_type == "focus":
+        generic_chunk_penalty -= 0.04
+
     return (
         semantic_score
         + (content_score * 0.85)
@@ -628,6 +712,9 @@ def _score_document(
         + section_bonus
         + history_penalty
         + image_penalty
+        + richness_score
+        + structured_bonus
+        + generic_chunk_penalty
     )
 
 
@@ -840,8 +927,9 @@ def _expand_requested_sections(
 
 def generate_query_variants(query: str) -> list[str]:
     """Generate rewritten query variants for multi-query retrieval."""
-    terms = tokenize(query)
-    variants = [query]
+    normalized_query = normalize_query(query)
+    terms = tokenize(normalized_query)
+    variants = [normalized_query]
 
     specific = [t for t in terms if t not in GENERIC_QUERY_TERMS and t not in BROAD_KEYWORDS]
     generic = [t for t in terms if t in GENERIC_QUERY_TERMS or t in BROAD_KEYWORDS]
@@ -849,27 +937,75 @@ def generate_query_variants(query: str) -> list[str]:
     if specific and generic:
         variants.append(" ".join(specific))
 
+    phrase_variants = [
+        ("source code management", "gitlab code repository procedure"),
+        ("manage source code", "gitlab code repository workflow"),
+        ("code repository", "repository setup gitlab"),
+        ("source control", "gitlab repository workflow"),
+    ]
+    for phrase, replacement in phrase_variants:
+        if phrase in normalized_query:
+            variants.append(normalized_query.replace(phrase, replacement))
+
     synonym_map = {
-        "process": "workflow procedure",
-        "workflow": "process procedure",
+        "process": "workflow procedure steps",
+        "workflow": "process procedure steps",
         "procedure": "process workflow steps",
-        "responsibilities": "roles duties",
+        "procedures": "procedure workflow steps",
+        "responsibilities": "roles duties accountabilities",
         "roles": "responsibilities duties",
         "objective": "purpose goal overview",
         "steps": "process workflow procedure",
         "checklist": "steps list guidelines",
-        "approval": "review sign-off",
-        "issue": "ticket bug defect",
-        "lead": "manager head",
+        "approval": "review sign off",
+        "issue": "ticket defect bug",
+        "repository": "repo codebase gitlab",
+        "gitlab": "repository source control gitlab",
     }
 
-    for term in specific[:2]:
-        if term in synonym_map:
-            synonym_query = query.lower().replace(term, synonym_map[term].split()[0])
-            if synonym_query != query.lower():
-                variants.append(synonym_query)
+    for term in specific[:3]:
+        synonyms = synonym_map.get(term)
+        if not synonyms:
+            continue
+        variants.append(f"{normalized_query} {' '.join(synonyms.split()[:2])}".strip())
 
-    return variants[:3]
+    deduped: list[str] = []
+    seen: set[str] = set()
+    for variant in variants:
+        cleaned = " ".join(variant.split()).strip()
+        if not cleaned or cleaned in seen:
+            continue
+        deduped.append(cleaned)
+        seen.add(cleaned)
+    return deduped[:5]
+
+
+def _select_docs_for_best_source(
+    docs: list[tuple[float, Document]],
+    query: str,
+    *,
+    limit: int,
+) -> list[Document]:
+    wants_complete = _wants_complete_structured_answer(query)
+    selected: list[Document] = []
+    non_section_quota = 1 if not wants_complete else 0
+    non_section_count = 0
+
+    for _, doc in docs:
+        content_type = str(doc.metadata.get("content_type", ""))
+        if wants_complete and content_type == "profile":
+            continue
+        if content_type != "section":
+            if non_section_count >= non_section_quota:
+                continue
+            non_section_count += 1
+        selected.append(doc)
+        if len(selected) >= limit:
+            break
+
+    if selected:
+        return selected
+    return [doc for _, doc in docs[:limit]]
 
 
 def retrieve(
@@ -1059,7 +1195,11 @@ def retrieve(
         }
         best_source = max(source_scores, key=source_scores.get)
 
-    selected_docs = [doc for _, doc in source_buckets[best_source][: get_k_for_question(query)]]
+    selected_docs = _select_docs_for_best_source(
+        source_buckets[best_source],
+        query,
+        limit=get_k_for_question(query),
+    )
     if not selected_docs:
         return [], None
     selected_docs = _expand_requested_sections(

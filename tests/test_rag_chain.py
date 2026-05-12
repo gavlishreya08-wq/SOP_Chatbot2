@@ -653,6 +653,31 @@ class RAGChainTests(unittest.TestCase):
         self.assertNotIn("1. Code Structure", context)
         self.assertIn("1. Code Structure", raw_context)
 
+    def test_format_context_respects_budget_and_keeps_section_chunks_first(self):
+        section_doc = make_doc(
+            "SOURCE TITLE: GitLab SOP\nSECTION: Procedure\nCONTENT:\n"
+            + ("Detailed step.\n" * 150),
+            "GitLab.pdf",
+            section_title="Procedure",
+            section_index=1,
+            chunk_in_section=1,
+            content_type="section",
+        )
+        profile_doc = make_doc(
+            "DOCUMENT PROFILE\nSOURCE TITLE: GitLab SOP\nSUMMARY: " + ("Summary text. " * 200),
+            "GitLab.pdf",
+            section_title="Document Profile",
+            content_type="profile",
+        )
+        chain = RAGChain(FakeLLM(), FakeVectorStore(metadatas=[section_doc.metadata, profile_doc.metadata]))
+
+        prepared = chain._prepare_docs_for_llm_context([profile_doc, section_doc], "list all procedure for source code management gitlab")
+        context = chain._format_context(prepared, max_chars=1200)
+
+        self.assertTrue(context.startswith("[Source: GitLab.pdf | Section: Procedure"))
+        self.assertLessEqual(len(context), 1200)
+        self.assertNotIn("DOCUMENT PROFILE", context)
+
     def test_query_formats_time_based_table_from_sop_chunks(self):
         source = "DailyPlan.pdf"
         doc = make_doc(

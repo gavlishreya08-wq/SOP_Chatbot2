@@ -7408,5 +7408,1275 @@
     "was_clarification": false,
     "answer_mode": "detailed",
     "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-25T09:02:03.200540+00:00",
+    "question": "job objectives of technical lead",
+    "active_sop": null,
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-25T09:02:24.654245+00:00",
+    "question": "job objectives of test lead",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "RR_TestLead_V1.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-25T09:02:49.818582+00:00",
+    "question": "responsibilities of test lead",
+    "active_sop": "RR_TestLead_V1.pdf",
+    "detected_sop": "RR_TestLead_V1.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-25T09:03:05.473699+00:00",
+    "question": "list all responsibilities of test lead",
+    "active_sop": "RR_TestLead_V1.pdf",
+    "detected_sop": "RR_TestLead_V1.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-25T09:04:12.144651+00:00",
+    "question": "give detailed procedure for source code management in gitlab",
+    "active_sop": "RR_TestLead_V1.pdf",
+    "detected_sop": "SOP Source Code Management Gitlab.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-25T09:04:56.180027+00:00",
+    "question": "procedure for source code management gittalb",
+    "active_sop": "SOP Source Code Management Gitlab.pdf",
+    "detected_sop": "SOP Source Code Management Gitlab.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-25T09:05:08.550788+00:00",
+    "question": "list all procedure for source code management gittalb",
+    "active_sop": "SOP Source Code Management Gitlab.pdf",
+    "detected_sop": "SOP Source Code Management Gitlab.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-25T09:05:39.393602+00:00",
+    "question": "list all procedure source code management gitlab",
+    "active_sop": "SOP Source Code Management Gitlab.pdf",
+    "detected_sop": "SOP Source Code Management Gitlab.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-25T09:05:47.830886+00:00",
+    "question": "procedure source code management gitlab",
+    "active_sop": "SOP Source Code Management Gitlab.pdf",
+    "detected_sop": "SOP Source Code Management Gitlab.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-25T09:06:51.366720+00:00",
+    "question": "source code management gitlab",
+    "active_sop": "SOP Source Code Management Gitlab.pdf",
+    "detected_sop": "SOP Source Code Management Gitlab.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-25T09:14:34.485004+00:00",
+    "question": "give all points",
+    "active_sop": null,
+    "detected_sop": "LongSection.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:34.509921+00:00",
+    "question": "give all responsibilities of technical lead",
+    "active_sop": null,
+    "detected_sop": "TechnicalLead.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:34.525494+00:00",
+    "question": "what are the responsibilities of technical lead",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:34.555664+00:00",
+    "question": "list responsibilities",
+    "active_sop": null,
+    "detected_sop": "Roles.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:34.566273+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:34.576283+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "ReviewMeeting.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:34.587483+00:00",
+    "question": "what is the escalation sla",
+    "active_sop": null,
+    "detected_sop": "ProductionIssue.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:34.598508+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:34.609291+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:34.623285+00:00",
+    "question": "responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:34.636190+00:00",
+    "question": "responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:34.667522+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:34.700006+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:34.730886+00:00",
+    "question": "what is the ba role in creating tickets",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:34.741977+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:34.750501+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:34.762926+00:00",
+    "question": "what is responsibility 5",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:34.774449+00:00",
+    "question": "what is point 25",
+    "active_sop": null,
+    "detected_sop": "LongSection.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:34.784900+00:00",
+    "question": "what is responsibility 35",
+    "active_sop": null,
+    "detected_sop": "TechnicalLead.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:34.795904+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:34.806400+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:47.239114+00:00",
+    "question": "give all points",
+    "active_sop": null,
+    "detected_sop": "LongSection.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:47.258266+00:00",
+    "question": "give all responsibilities of technical lead",
+    "active_sop": null,
+    "detected_sop": "TechnicalLead.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:47.286936+00:00",
+    "question": "what are the responsibilities of technical lead",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:47.302803+00:00",
+    "question": "list responsibilities",
+    "active_sop": null,
+    "detected_sop": "Roles.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:47.313075+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:47.323128+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "ReviewMeeting.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:47.333120+00:00",
+    "question": "what is the escalation sla",
+    "active_sop": null,
+    "detected_sop": "ProductionIssue.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:47.343471+00:00",
+    "question": "show agenda",
+    "active_sop": null,
+    "detected_sop": "DailyPlan.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:47.352452+00:00",
+    "question": "explain the automation objective",
+    "active_sop": null,
+    "detected_sop": "SOP_TestAutomation_V1.0.pdf",
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:47.387297+00:00",
+    "question": "responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:47.393356+00:00",
+    "question": "responsibilities",
+    "active_sop": "RoleSOP.pdf",
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:47.406213+00:00",
+    "question": "explain change workflow",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:47.438224+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:47.455180+00:00",
+    "question": "what is the ba role in creating tickets",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:47.488463+00:00",
+    "question": "list all responsibilities",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:47.497500+00:00",
+    "question": "what is the role",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:47.510972+00:00",
+    "question": "what is responsibility 5",
+    "active_sop": null,
+    "detected_sop": "RoleSOP.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:47.526120+00:00",
+    "question": "what is point 25",
+    "active_sop": null,
+    "detected_sop": "LongSection.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:47.538013+00:00",
+    "question": "what is responsibility 35",
+    "active_sop": null,
+    "detected_sop": "TechnicalLead.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:47.550015+00:00",
+    "question": "explain workflow",
+    "active_sop": null,
+    "detected_sop": "ChangeManagementWorkflow_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:14:47.562080+00:00",
+    "question": "what is included in release planning",
+    "active_sop": null,
+    "detected_sop": "ReleaseProcess.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": ""
+  },
+  {
+    "timestamp": "2026-04-25T09:17:07.676218+00:00",
+    "question": "can i deploy code in production without testing",
+    "active_sop": null,
+    "detected_sop": "SOP_Production Issue.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-25T09:17:54.152273+00:00",
+    "question": "what is server whitelisting",
+    "active_sop": "SOP_Production Issue.pdf",
+    "detected_sop": "SOP_ServerWhitelistingg.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-25T09:18:31.541184+00:00",
+    "question": "list all the responsibilities of technical lead",
+    "active_sop": "SOP_ServerWhitelistingg.pdf",
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-25T09:19:02.970694+00:00",
+    "question": "detailed procedure for source source code management code repository gitlab source code management gitlab repository gitlab code repository gitlab source code management gitlab repository source code management gitlab repository in gitlab lab",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "SOP Source Code Management Gitlab.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-25T09:19:12.978598+00:00",
+    "question": "procedure for source source code management code repository gitlab source code management gitlab repository gitlab code repository gitlab source code management gitlab repository source code management gitlab repository in gitlab lab",
+    "active_sop": "SOP Source Code Management Gitlab.pdf",
+    "detected_sop": "SOP Source Code Management Gitlab.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-25T09:20:07.340836+00:00",
+    "question": "source source code management code repository gitlab source code management gitlab repository gitlab code repository gitlab source code management gitlab repository source code management gitlab repository gitlab lab",
+    "active_sop": "SOP Source Code Management Gitlab.pdf",
+    "detected_sop": "SOP Source Code Management Gitlab.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-25T09:20:25.039494+00:00",
+    "question": "what is the job objective of technical resource manager",
+    "active_sop": "SOP Source Code Management Gitlab.pdf",
+    "detected_sop": "2.RR_TechnicalResourceManager_version1.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-25T09:21:13.422230+00:00",
+    "question": "how is capacity building handled by the technical resource manager",
+    "active_sop": "2.RR_TechnicalResourceManager_version1.pdf",
+    "detected_sop": "2.RR_TechnicalResourceManager_version1.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-25T09:22:00.969677+00:00",
+    "question": "what reviews are conducted by the technical resource manager",
+    "active_sop": "2.RR_TechnicalResourceManager_version1.pdf",
+    "detected_sop": "2.RR_TechnicalResourceManager_version1.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-25T09:22:07.716863+00:00",
+    "question": "what is the yearly training requirement for technical resource manager",
+    "active_sop": "2.RR_TechnicalResourceManager_version1.pdf",
+    "detected_sop": "2.RR_TechnicalResourceManager_version1.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-25T09:22:52.308862+00:00",
+    "question": "who does the technical resource manager report to",
+    "active_sop": "2.RR_TechnicalResourceManager_version1.pdf",
+    "detected_sop": "2.RR_TechnicalResourceManager_version1.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-25T09:23:07.726577+00:00",
+    "question": "explain peer review responsibilities of development engineer",
+    "active_sop": "2.RR_TechnicalResourceManager_version1.pdf",
+    "detected_sop": "4_RR_DevelopmentEng_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-25T09:25:34.537299+00:00",
+    "question": "who is the manager of technical resource manager",
+    "active_sop": "4_RR_DevelopmentEng_version2.pdf",
+    "detected_sop": "2.RR_TechnicalResourceManager_version1.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-25T09:26:36.385395+00:00",
+    "question": "what is the main purpose of a development engineer role",
+    "active_sop": "2.RR_TechnicalResourceManager_version1.pdf",
+    "detected_sop": "4_RR_DevelopmentEng_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-25T09:27:27.786946+00:00",
+    "question": "how should peer review be done by the developer",
+    "active_sop": "4_RR_DevelopmentEng_version2.pdf",
+    "detected_sop": "4_RR_DevelopmentEng_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-25T09:29:03.652027+00:00",
+    "question": "what is meant by ip whitelisting on a server",
+    "active_sop": "4_RR_DevelopmentEng_version2.pdf",
+    "detected_sop": "SOP_ServerWhitelistingg.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-25T09:43:03.985193+00:00",
+    "question": "what are the best security practices while coding in react",
+    "active_sop": "SOP_ServerWhitelistingg.pdf",
+    "detected_sop": "Coding React Standards.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-25T10:06:40.924475+00:00",
+    "question": "explain react security standards",
+    "active_sop": "Coding React Standards.pdf",
+    "detected_sop": "Coding React Standards.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-25T11:02:47.203107+00:00",
+    "question": "what are the peer review duties of development engineer",
+    "active_sop": "Coding React Standards.pdf",
+    "detected_sop": "4_RR_DevelopmentEng_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-25T11:03:38.213081+00:00",
+    "question": "who is the chief technical office",
+    "active_sop": "4_RR_DevelopmentEng_version2.pdf",
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-25T11:04:24.369248+00:00",
+    "question": "who is prachi naik",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-25T11:05:22.203759+00:00",
+    "question": "how should security be handled in react projects",
+    "active_sop": null,
+    "detected_sop": "Coding React Standards.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-25T11:06:50.044221+00:00",
+    "question": "what is the job objective of technical lead",
+    "active_sop": "Coding React Standards.pdf",
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-25T11:14:50.702457+00:00",
+    "question": "explain gitlab lab source source code management code repository gitlab source code management gitlab repository gitlab code repository gitlab source code management gitlab repository source code management gitlab repository process",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "SOP Source Code Management Gitlab.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-25T11:16:36.812650+00:00",
+    "question": "how should peer review be done by the developer",
+    "active_sop": "SOP Source Code Management Gitlab.pdf",
+    "detected_sop": "4_RR_DevelopmentEng_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-25T11:40:24.208870+00:00",
+    "question": "can i deploy code in production without testing",
+    "active_sop": "4_RR_DevelopmentEng_version2.pdf",
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-25T11:41:23.675056+00:00",
+    "question": "can i deploy code in production without testing",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-25T11:54:41.103910+00:00",
+    "question": "can i deploy code in production without testing",
+    "active_sop": null,
+    "detected_sop": "SOP_Production Issue.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-27T04:57:53.842497+00:00",
+    "question": "list all react coding standards",
+    "active_sop": null,
+    "detected_sop": "Coding React Standards.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-27T05:04:08.494695+00:00",
+    "question": "what should pm do after receiving a work order from the client",
+    "active_sop": "Coding React Standards.pdf",
+    "detected_sop": "SOP_NewDevelopmentProject(ActivityTimeline).pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-27T05:04:51.659632+00:00",
+    "question": "who raises the ticket to ba for frs preparation",
+    "active_sop": "SOP_NewDevelopmentProject(ActivityTimeline).pdf",
+    "detected_sop": "SOP_NewDevelopmentProject(ActivityTimeline).pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-27T05:05:31.043296+00:00",
+    "question": "is ceo approval mandatory if frs approval from client is missing",
+    "active_sop": "SOP_NewDevelopmentProject(ActivityTimeline).pdf",
+    "detected_sop": "SOP_NewDevelopmentProject(ActivityTimeline).pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-27T05:06:14.761558+00:00",
+    "question": "what is the role of cto during frs preparation",
+    "active_sop": "SOP_NewDevelopmentProject(ActivityTimeline).pdf",
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-27T05:07:02.368604+00:00",
+    "question": "if the client has not approved the frs yet can development still start",
+    "active_sop": null,
+    "detected_sop": "SOP_NewDevelopmentProject(ActivityTimeline).pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-27T05:09:12.823994+00:00",
+    "question": "when should kickoff be scheduled and by whom",
+    "active_sop": "SOP_NewDevelopmentProject(ActivityTimeline).pdf",
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-27T05:55:45.654227+00:00",
+    "question": "what should tl do from 9 30 am to 10 00 am",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "SOP_TLDAYPLAN.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-27T06:19:14.056496+00:00",
+    "question": "what is whitelisting",
+    "active_sop": "SOP_TLDAYPLAN.pdf",
+    "detected_sop": "SOP_ServerWhitelistingg.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-27T06:20:05.270787+00:00",
+    "question": "difference between inbound and outbound rules",
+    "active_sop": "SOP_ServerWhitelistingg.pdf",
+    "detected_sop": "SOP_ServerWhitelistingg.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-27T06:21:05.855719+00:00",
+    "question": "what should msp team do after cto approval",
+    "active_sop": "SOP_ServerWhitelistingg.pdf",
+    "detected_sop": "GEL TECH SOP GEN NEWTECHINCOMPANY.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-27T07:40:22.614798+00:00",
+    "question": "my client says application is slow only on production which sop applies",
+    "active_sop": "GEL TECH SOP GEN NEWTECHINCOMPANY.pdf",
+    "detected_sop": "SOP_APPLICATION DEPLOYMENT _ RELEASE.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-27T07:41:03.948792+00:00",
+    "question": "we need server access from a new external system which process should be followed",
+    "active_sop": "SOP_APPLICATION DEPLOYMENT _ RELEASE.pdf",
+    "detected_sop": "SOP-CMS-Checklist-GIGW-Annexure-I.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-27T07:42:14.288299+00:00",
+    "question": "who approves the whitelist request first",
+    "active_sop": "SOP-CMS-Checklist-GIGW-Annexure-I.pdf",
+    "detected_sop": "SOP_Backend_Data_Update_Request_20260224175914.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-27T09:23:43.175763+00:00",
+    "question": "when should standup meeting be conducted",
+    "active_sop": "SOP_Backend_Data_Update_Request_20260224175914.pdf",
+    "detected_sop": "SOP_Standup_meeting.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-27T09:25:44.868890+00:00",
+    "question": "who must comment if compliance timeline is delayed for high priority tasks",
+    "active_sop": "SOP_Standup_meeting.pdf",
+    "detected_sop": "SOP_Issue_resolution_meeting.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-28T04:45:37.954173+00:00",
+    "question": "can i deploy code in production without testing",
+    "active_sop": null,
+    "detected_sop": "SOP_Production Issue.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-28T05:09:26.527335+00:00",
+    "question": "list all react coding standards",
+    "active_sop": "SOP_Production Issue.pdf",
+    "detected_sop": "Coding React Standards.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-28T06:07:28.211342+00:00",
+    "question": "list all the responsibilities of technical lead",
+    "active_sop": "Coding React Standards.pdf",
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-28T06:10:47.301735+00:00",
+    "question": "job objective of technical lead",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-28T06:11:41.712601+00:00",
+    "question": "at what time can i meet cto",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "SOP_CTO_Review.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-28T06:20:37.783116+00:00",
+    "question": "how to write a stored procedure",
+    "active_sop": "SOP_CTO_Review.pdf",
+    "detected_sop": "Final_3_Database Coding_Development Standards & Best Practice.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-28T06:21:46.643435+00:00",
+    "question": "how to write a stored procedure give in details",
+    "active_sop": "Final_3_Database Coding_Development Standards & Best Practice.pdf",
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-28T06:23:00.468025+00:00",
+    "question": "list all stored procedure requirement",
+    "active_sop": null,
+    "detected_sop": "Final_3_Database Coding_Development Standards & Best Practice.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-28T07:07:15.066584+00:00",
+    "question": "how many yrs of experience is needed for trainee software engineer",
+    "active_sop": "Final_3_Database Coding_Development Standards & Best Practice.pdf",
+    "detected_sop": "6_RR_MaintainaceEng.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-28T07:22:19.190581+00:00",
+    "question": "who is test lead",
+    "active_sop": "6_RR_MaintainaceEng.pdf",
+    "detected_sop": "RR_TestLead_V1.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-28T07:23:39.497103+00:00",
+    "question": "name of the test lead",
+    "active_sop": "RR_TestLead_V1.pdf",
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-29T04:50:18.766735+00:00",
+    "question": "summarize react coding standards",
+    "active_sop": null,
+    "detected_sop": "Coding React Standards.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-30T10:04:32.568123+00:00",
+    "question": "what is the role of manager",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-30T10:06:49.585141+00:00",
+    "question": "what is the role of manager",
+    "active_sop": null,
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": true,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-30T10:07:41.964771+00:00",
+    "question": "technical manager",
+    "active_sop": null,
+    "detected_sop": "2.RR_TechnicalResourceManager_version1.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-30T10:10:55.502761+00:00",
+    "question": "what are the tasks reviewed by the maintenance team lead",
+    "active_sop": "2.RR_TechnicalResourceManager_version1.pdf",
+    "detected_sop": "5_RR_Maintainacelead.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-30T11:28:07.282928+00:00",
+    "question": "who is the technical lead",
+    "active_sop": "5_RR_Maintainacelead.pdf",
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-30T11:29:12.222974+00:00",
+    "question": "all react coding standards",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "Coding React Standards.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-30T11:30:12.447612+00:00",
+    "question": "what all are the react coding standards",
+    "active_sop": "Coding React Standards.pdf",
+    "detected_sop": "Coding React Standards.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-30T11:31:30.284393+00:00",
+    "question": "how to write an stored procedure",
+    "active_sop": "Coding React Standards.pdf",
+    "detected_sop": "Final_3_Database Coding_Development Standards & Best Practice.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-30T11:32:15.416809+00:00",
+    "question": "list all",
+    "active_sop": "Final_3_Database Coding_Development Standards & Best Practice.pdf",
+    "detected_sop": "Final_3_Database Coding_Development Standards & Best Practice.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-30T11:40:29.235432+00:00",
+    "question": "list all react coding standards",
+    "active_sop": null,
+    "detected_sop": "Coding React Standards.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-30T11:41:25.024749+00:00",
+    "question": "how to write stored procedure",
+    "active_sop": "Coding React Standards.pdf",
+    "detected_sop": "Final_3_Database Coding_Development Standards & Best Practice.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-30T11:42:08.499179+00:00",
+    "question": "list all",
+    "active_sop": "Final_3_Database Coding_Development Standards & Best Practice.pdf",
+    "detected_sop": "Coding React Standards.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-30T11:44:59.761871+00:00",
+    "question": "you are the bot for which company",
+    "active_sop": "Coding React Standards.pdf",
+    "detected_sop": null,
+    "confidence": "low",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-04-30T11:45:59.088467+00:00",
+    "question": "i am getting an error in the code what should i do",
+    "active_sop": null,
+    "detected_sop": "GENERAL SOFTWARE CODING STANDARDS & BEST\u00a0PRACTICES .pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-30T11:48:52.705534+00:00",
+    "question": "what is the process to fix production issue",
+    "active_sop": "GENERAL SOFTWARE CODING STANDARDS & BEST\u00a0PRACTICES .pdf",
+    "detected_sop": "SOP_Root Cause Fixture.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-04-30T11:52:12.980865+00:00",
+    "question": "what is the process to ensure the fix does not introduce any new issues",
+    "active_sop": "SOP_Root Cause Fixture.pdf",
+    "detected_sop": "SOP_Root Cause Fixture.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-05-04T04:50:24.920068+00:00",
+    "question": "what is the job objective of technical lead",
+    "active_sop": null,
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "gemini"
+  },
+  {
+    "timestamp": "2026-05-04T04:50:59.783921+00:00",
+    "question": "list all the responsibilities",
+    "active_sop": "3_RR_TechnicalLead_version2.pdf",
+    "detected_sop": "3_RR_TechnicalLead_version2.pdf",
+    "confidence": "medium",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
+  },
+  {
+    "timestamp": "2026-05-04T05:13:31.973354+00:00",
+    "question": "what is server whitelisting",
+    "active_sop": null,
+    "detected_sop": "SOP_ServerWhitelistingg.pdf",
+    "confidence": "high",
+    "was_clarification": false,
+    "answer_mode": "detailed",
+    "llm_provider": "groq"
   }
 ]
